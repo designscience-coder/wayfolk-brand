@@ -6,11 +6,41 @@
 <title>WayFolk — Brand Direction v0.4</title>
 <!-- Adobe Fonts — TypeKit project (Freight collection, kept for future web use) -->
 <link rel="stylesheet" href="https://use.typekit.net/yic2dsc.css">
-<!-- Google Fonts — Work Sans, IBM Plex Sans, IBM Plex Mono -->
+<!-- Google Fonts — IBM Plex Sans, IBM Plex Mono -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+  /* Akkurat — local font (Lineto) */
+  @font-face {
+    font-family: 'Akkurat';
+    src: local('Akkurat Light'), local('Akkurat-Light');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Akkurat';
+    src: local('Akkurat Light Italic'), local('AkkuratLight-Italic');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Akkurat';
+    src: local('Akkurat'), local('Akkurat-Regular');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Akkurat';
+    src: local('Akkurat Bold'), local('Akkurat-Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* PP Editorial New — local font (Pangram Pangram) */
   @font-face {
     font-family: 'PP Editorial New';
@@ -99,7 +129,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'Work Sans', -apple-system, sans-serif;
+    font-family: 'Akkurat', -apple-system, sans-serif;
     background: var(--parchment);
     color: var(--espresso);
     line-height: 1.6;
@@ -124,7 +154,7 @@
     margin-bottom: 40px;
   }
   .hero h1 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-weight: 300;
     font-size: 72px;
     letter-spacing: -0.03em;
@@ -160,7 +190,7 @@
     margin-bottom: 10px;
   }
   .section h2 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-weight: 300;
     font-size: 36px;
     letter-spacing: -0.02em;
@@ -243,7 +273,7 @@
     max-width: 760px;
   }
   .principle-box h3 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -355,10 +385,10 @@
   }
   .type-meta .role {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--espresso);
     margin-bottom: 6px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
   }
 
   .interplay-grid {
@@ -372,7 +402,7 @@
     padding: 40px;
   }
   .interplay-card h3 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-weight: 300;
     font-size: 32px;
     letter-spacing: -0.02em;
@@ -521,7 +551,7 @@
     margin-bottom: 14px;
   }
   .specimen-headline {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-weight: 300;
     font-size: 28px;
     letter-spacing: -0.02em;
@@ -539,9 +569,9 @@
     display: inline-block;
     padding: 10px 24px;
     border-radius: var(--radius-pill);
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Akkurat', sans-serif;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     border: 1.5px solid transparent;
     cursor: pointer;
   }
@@ -764,7 +794,7 @@
 <div class="section">
   <div class="section-num">03 — Typography</div>
   <h2>The interplay — <em>where precision meets warmth</em></h2>
-  <p class="section-intro">WayFolk's typographic signature: headlines begin in Work Sans Light (the geometric, structural voice) and land on Editorial New Ultralight Italic (the humanist, emotional payoff). Sans meets serif — one clean and geometric, the other warm and organic. IBM Plex Sans handles all body text. IBM Plex Mono for labels and tokens. The interplay is what makes WayFolk feel like neither a tech app nor a travel magazine — but something in between.</p>
+  <p class="section-intro">WayFolk's typographic signature: headlines begin in Akkurat Light (the geometric, structural voice) and land on Editorial New Ultralight Italic (the humanist, emotional payoff). Sans meets serif — one clean and geometric, the other warm and organic. IBM Plex Sans handles all body text. IBM Plex Mono for labels and tokens. The interplay is what makes WayFolk feel like neither a tech app nor a travel magazine — but something in between.</p>
 
   <div class="sub-label">The Signature Pattern</div>
   <div class="interplay-grid">
@@ -797,14 +827,14 @@
   <div class="sub-label">Font Roles</div>
   <div class="type-pair">
     <div class="type-meta">
-      <div class="role">Work Sans — Sans Primary</div>
+      <div class="role">Akkurat — Sans Primary</div>
       Weights: Light (300), Regular (400), Medium (500), SemiBold (600)<br>
       Use: Headline structure, UI headings, buttons, navigation, section titles
     </div>
     <div>
-      <div style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.03em;line-height:1.15;color:var(--espresso);">Your people, everywhere</div>
-      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;color:var(--espresso);margin-top:12px;">Your Folk in Tallinn</div>
-      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:13px;color:var(--dusk);margin-top:8px;display:flex;gap:12px;">
+      <div style="font-family:'Akkurat',sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.03em;line-height:1.15;color:var(--espresso);">Your people, everywhere</div>
+      <div style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:18px;color:var(--espresso);margin-top:12px;">Your Folk in Tallinn</div>
+      <div style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:13px;color:var(--dusk);margin-top:8px;display:flex;gap:12px;">
         <span class="btn btn-dark" style="font-size:12px;padding:8px 18px;">Say Hello</span>
         <span class="btn btn-outline" style="font-size:12px;padding:8px 18px;">Later</span>
       </div>
@@ -857,13 +887,13 @@
   <div class="mode-grid">
     <div class="mode-card" style="background:var(--night);color:var(--cream);">
       <div class="mode-card-label" style="color:var(--stone);">Expressive — Marketing &amp; Brand</div>
-      <div style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">You have <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;color:var(--earth);">Folk</em> in every city</div>
-      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--stone);">Work Sans Light headlines with Editorial New italic for the emotional payoff. IBM Plex Sans body. The serif word is always the one that carries the feeling.</p>
+      <div style="font-family:'Akkurat',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">You have <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;color:var(--earth);">Folk</em> in every city</div>
+      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--stone);">Akkurat Light headlines with Editorial New italic for the emotional payoff. IBM Plex Sans body. The serif word is always the one that carries the feeling.</p>
     </div>
     <div class="mode-card" style="background:var(--cream);color:var(--espresso);">
       <div class="mode-card-label" style="color:var(--stone);">Functional — Product UI</div>
-      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:20px;line-height:1.3;margin-bottom:14px;">Your Folk in Tallinn</div>
-      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--dusk);">Work Sans Medium for product headings. IBM Plex Sans for all body text. Editorial New appears only in feature labels and empty-state headlines — keeping the brand warmth present but restrained.</p>
+      <div style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:20px;line-height:1.3;margin-bottom:14px;">Your Folk in Tallinn</div>
+      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--dusk);">Akkurat Regular for product headings. IBM Plex Sans for all body text. Editorial New appears only in feature labels and empty-state headlines — keeping the brand warmth present but restrained.</p>
     </div>
   </div>
 
@@ -871,19 +901,19 @@
   <div>
     <div class="type-scale-row">
       <span class="type-scale-token">Display</span>
-      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:56px;line-height:1;letter-spacing:-0.03em;">Way<em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;color:var(--earth);">Folk</em></span>
+      <span style="font-family:'Akkurat',sans-serif;font-weight:300;font-size:56px;line-height:1;letter-spacing:-0.03em;">Way<em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;color:var(--earth);">Folk</em></span>
     </div>
     <div class="type-scale-row">
       <span class="type-scale-token">H1</span>
-      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:40px;line-height:1.1;letter-spacing:-0.02em;">Your people, <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">everywhere</em></span>
+      <span style="font-family:'Akkurat',sans-serif;font-weight:300;font-size:40px;line-height:1.1;letter-spacing:-0.02em;">Your people, <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">everywhere</em></span>
     </div>
     <div class="type-scale-row">
       <span class="type-scale-token">H2</span>
-      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;">Plan your next trip, <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">together</em></span>
+      <span style="font-family:'Akkurat',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;">Plan your next trip, <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">together</em></span>
     </div>
     <div class="type-scale-row">
       <span class="type-scale-token">H3</span>
-      <span style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;line-height:1.35;">Your Folk in Tallinn</span>
+      <span style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:18px;line-height:1.35;">Your Folk in Tallinn</span>
     </div>
     <div class="type-scale-row">
       <span class="type-scale-token">Body</span>
@@ -937,7 +967,7 @@
 
     <div class="graphic-card">
       <h3>Two-Register Principle</h3>
-      <p>Warm brand layer for marketing and onboarding: photography, illustration, Editorial New italic, connection arcs. Precise product layer for the UI itself: Work Sans Medium, clean layout, monochrome-first, functional color only when meaningful.</p>
+      <p>Warm brand layer for marketing and onboarding: photography, illustration, Editorial New italic, connection arcs. Precise product layer for the UI itself: Akkurat Regular, clean layout, monochrome-first, functional color only when meaningful.</p>
       <div class="register-pair">
         <div class="register-box">
           <div class="register-box-label">Brand Layer</div>
@@ -959,8 +989,8 @@
         <span class="btn btn-dark">Join the Waitlist</span>
         <span class="btn btn-outline">Explore</span>
         <span class="btn btn-earth">Say Hello</span>
-        <span style="background:var(--espresso);color:var(--cream);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Work Sans',sans-serif;font-size:12px;font-weight:500;">Product CTA</span>
-        <span style="background:var(--cream);color:var(--dusk);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Work Sans',sans-serif;font-size:12px;">Secondary</span>
+        <span style="background:var(--espresso);color:var(--cream);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Akkurat',sans-serif;font-size:12px;font-weight:500;">Product CTA</span>
+        <span style="background:var(--cream);color:var(--dusk);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Akkurat',sans-serif;font-size:12px;">Secondary</span>
       </div>
     </div>
   </div>
@@ -977,7 +1007,7 @@
 <div class="section">
   <div class="section-num">05 — Applied Specimens</div>
   <h2>How it <em>comes together</em></h2>
-  <p class="section-intro">The color system, typography, and graphic language applied to real WayFolk contexts. Every headline uses the interplay — Work Sans structure, Editorial New italic soul.</p>
+  <p class="section-intro">The color system, typography, and graphic language applied to real WayFolk contexts. Every headline uses the interplay — Akkurat structure, Editorial New italic soul.</p>
 
   <div class="specimen-grid">
     <div class="specimen-card" style="background:var(--night);color:var(--cream);">
@@ -1004,7 +1034,7 @@
     <div class="specimen-card" style="background:var(--espresso);color:var(--sand);">
       <div>
         <div class="specimen-overline">Globe View</div>
-        <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;margin-bottom:6px;color:var(--cream);">Your Globe</div>
+        <div style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:18px;margin-bottom:6px;color:var(--cream);">Your Globe</div>
         <div style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:var(--stone);">12 cities · 47 Folk · 3 upcoming trips</div>
       </div>
       <div style="display:flex;gap:6px;margin-top:20px;">
@@ -1017,7 +1047,7 @@
     <div class="specimen-card" style="background:#fff;color:var(--espresso);border:1px solid var(--sand);">
       <div>
         <div class="specimen-overline" style="opacity:0.4;">Notification</div>
-        <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:16px;margin-bottom:6px;">Sarah is heading to <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">Tallinn</em></div>
+        <div style="font-family:'Akkurat',sans-serif;font-weight:400;font-size:16px;margin-bottom:6px;">Sarah is heading to <em style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-weight:200;">Tallinn</em></div>
         <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--dusk);line-height:1.6;">Your friend Sarah just shared she'll be in your city next week. She'd love a coffee recommendation.</p>
       </div>
       <div style="display:flex;gap:8px;margin-top:16px;">
@@ -1053,7 +1083,7 @@
     <div class="flat-card" style="background:var(--cream);border-color:var(--sand);">
       <h4>Testimonial Pattern</h4>
       <div style="font-family:'PP Editorial New', Georgia, serif;font-style:italic;font-size:22px;line-height:1.5;color:var(--espresso);margin-top:12px;">WayFolk changed how I travel. I don't search for hotels anymore — I ask my Folk what they'd do.</div>
-      <div style="font-family:'Work Sans',sans-serif;font-size:13px;color:var(--stone);margin-top:14px;">Anna K., WayFolk Member</div>
+      <div style="font-family:'Akkurat',sans-serif;font-size:13px;color:var(--stone);margin-top:14px;">Anna K., WayFolk Member</div>
     </div>
   </div>
 </div>
@@ -1064,12 +1094,12 @@
 <div class="section">
   <div class="section-num">06 — Voice ↔ Visual Alignment</div>
   <h2>How the brand voice <em>maps to visuals</em></h2>
-  <p class="section-intro">The approved brand voice defines WayFolk as warm, conversational, people-centered, and never showy. The interplay makes the voice typographic — Work Sans is the rational friend, Editorial New italic is the emotional one.</p>
+  <p class="section-intro">The approved brand voice defines WayFolk as warm, conversational, people-centered, and never showy. The interplay makes the voice typographic — Akkurat is the rational friend, Editorial New italic is the emotional one.</p>
 
   <div class="voice-grid">
     <div class="voice-card">
       <h3>"warm but not showy"</h3>
-      <p>Work Sans Light is clean without being cold. Editorial New italic adds warmth without decorating. Muted earth tones avoid loudness. Monochrome-first means color is earned. Confident without flashy.</p>
+      <p>Akkurat Light is clean without being cold. Editorial New italic adds warmth without decorating. Muted earth tones avoid loudness. Monochrome-first means color is earned. Confident without flashy.</p>
     </div>
     <div class="voice-card">
       <h3>"conversational, not corporate"</h3>
@@ -1094,7 +1124,7 @@
     <div class="step-card">
       <div class="step-num">01</div>
       <h3>Wordmark &amp; Logo</h3>
-      <p>Does "WayFolk" use the interplay? Work Sans "Way" + Editorial New italic "Folk"? Or a custom wordmark that embodies the principle? Does a symbol sit alongside it?</p>
+      <p>Does "WayFolk" use the interplay? Akkurat "Way" + Editorial New italic "Folk"? Or a custom wordmark that embodies the principle? Does a symbol sit alongside it?</p>
     </div>
     <div class="step-card">
       <div class="step-num">02</div>
