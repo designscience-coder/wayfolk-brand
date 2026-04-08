@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElevenLabs — Reconstructed Brand Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Nunito+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Neutrals */
+    --n50: #F2F2F2;
+    --n100: #E6E6E6;
+    --n200: #CCCCCC;
+    --n300: #B3B3B3;
+    --n400: #999999;
+    --n500: #808080;
+    --n600: #666666;
+    --n700: #4D4D4D;
+    --n800: #333333;
+    --n900: #292929;
+    --n950: #1A1A1A;
+
+    /* Expressive Tints */
+    --purple: #B951FB;
+    --magenta: #EC5CDB;
+    --red: #FE451D;
+    --orange: #FF6E1D;
+    --yellow: #F5F15C;
+    --green: #49F28D;
+    --teal: #50F8D4;
+    --cyan: #1AC6F6;
+    --blue: #2857FF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #FDFCFC;
+    color: #292929;
+    line-height: 1.6;
+  }
+
+  /* --- HEADER --- */
+  .hero {
+    background: #000;
+    color: #fff;
+    padding: 80px 60px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    border: 1px solid #333;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 {
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 .thin { font-weight: 300; }
+  .hero p {
+    margin-top: 24px;
+    font-size: 18px;
+    color: #999;
+    max-width: 560px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Chladni pattern simulation */
+  .chladni-bg {
+    position: absolute;
+    top: -40px; right: -60px;
+    width: 500px; height: 500px;
+    opacity: 0.08;
+    background:
+      radial-gradient(ellipse at 30% 40%, transparent 30%, #fff 31%, #fff 32%, transparent 33%),
+      radial-gradient(ellipse at 70% 60%, transparent 25%, #fff 26%, #fff 27%, transparent 28%),
+      radial-gradient(ellipse at 50% 20%, transparent 40%, #fff 41%, #fff 42%, transparent 43%),
+      radial-gradient(ellipse at 40% 80%, transparent 35%, #fff 36%, #fff 37%, transparent 38%);
+  }
+
+  /* --- SECTIONS --- */
+  .section {
+    padding: 80px 60px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .section:last-child { border-bottom: none; }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 12px;
+  }
+  .section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .section-intro {
+    font-size: 17px;
+    color: #666;
+    max-width: 640px;
+    margin-bottom: 48px;
+    line-height: 1.65;
+  }
+
+  /* --- LOGO --- */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .logo-card {
+    border-radius: 16px;
+    padding: 64px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+  }
+  .logo-card.dark { background: #000; }
+  .logo-card.light { background: #F2F2F2; }
+  .logo-card.photo {
+    background: linear-gradient(135deg, #2a1f3d, #1a2744);
+    position: relative;
+    overflow: hidden;
+  }
+  .logo-card.photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(185,81,251,0.15), transparent 50%),
+      radial-gradient(circle at 70% 40%, rgba(26,198,246,0.1), transparent 40%);
+  }
+
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-icon {
+    display: flex;
+    gap: 6px;
+  }
+  .logo-icon .bar {
+    width: 6px;
+    height: 36px;
+    border-radius: 2px;
+  }
+  .logo-icon.white .bar { background: #fff; }
+  .logo-icon.black .bar { background: #000; }
+  .logo-wordmark {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  .logo-wordmark.white { color: #fff; }
+  .logo-wordmark.black { color: #000; }
+
+  .logo-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .logo-rule {
+    background: #F8F8F8;
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .logo-rule h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .logo-rule p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* --- 11 ICON --- */
+  .icon-demo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .icon-shape {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+  }
+  .icon-shape.circle { border-radius: 999px; }
+  .icon-shape.dark-bg { background: #000; }
+  .icon-shape.light-bg { background: #F2F2F2; }
+  .icon-shape .bar {
+    width: 8px;
+    height: 40px;
+    border-radius: 2px;
+  }
+  .icon-shape .bar + .bar { margin-left: 8px; }
+
+  .icon-meaning {
+    max-width: 480px;
+  }
+  .icon-meaning h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .icon-meaning p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* --- COLORS --- */
+  .color-section-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 48px;
+  }
+  .color-section-header:first-of-type { margin-top: 0; }
+
+  .monochrome-strip {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100px;
+    margin-bottom: 16px;
+  }
+  .monochrome-strip .swatch {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 8px;
+  }
+  .monochrome-strip .swatch span {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  .expressive-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .exp-swatch {
+    aspect-ratio: 1;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .exp-swatch .name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .exp-swatch .hex {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  .hue-row {
+    display: grid;
+    grid-template-columns: 80px repeat(11, 1fr);
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .hue-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #999;
+  }
+  .hue-cell {
+    height: 36px;
+    border-radius: 6px;
+    position: relative;
+  }
+  .hue-cell:first-of-type { border-radius: 6px 3px 3px 6px; }
+  .hue-cell:last-child { border-radius: 3px 6px 6px 3px; }
+
+  .semantic-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .semantic-card {
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #E6E6E6;
+  }
+  .semantic-card h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: #999;
+  }
+  .semantic-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* --- TYPOGRAPHY --- */
+  .type-hero {
+    margin-bottom: 48px;
+  }
+  .type-hero .display {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .type-hero .subtitle {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: #999;
+    letter-spacing: -0.01em;
+  }
+
+  .type-cuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  .type-cut {
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 40px;
+  }
+  .type-cut-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .type-cut-sample {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+  .type-cut-sample.semi-condensed {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .type-cut-sample.normal {
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  .type-cut-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .type-weights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .type-weight {
+    border: 1px solid #E6E6E6;
+    border-radius: 12px;
+    padding: 32px;
+  }
+  .type-weight-name {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 12px;
+  }
+  .type-weight-sample {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .type-weight-usage {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .type-scale {
+    margin-bottom: 48px;
+  }
+  .type-scale-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: baseline;
+    padding: 16px 0;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .type-scale-label {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #999;
+  }
+  .type-scale-sample {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .type-usage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .type-usage-card {
+    background: #000;
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+  }
+  .type-usage-card.light {
+    background: #F2F2F2;
+    color: #292929;
+  }
+  .type-usage-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 16px;
+  }
+  .type-usage-card.light .type-usage-label { color: #999; }
+
+  .type-usage-card .expressive-heading {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .type-usage-card .functional-heading {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .type-usage-card .body-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.7;
+  }
+
+  /* --- GRAPHIC ELEMENTS --- */
+  .graphic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .graphic-card {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 300px;
+    position: relative;
+  }
+  .graphic-card .overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 32px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+  }
+  .graphic-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .graphic-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  /* Chladni pattern simulation */
+  .chladni-card {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chladni-sim {
+    width: 260px;
+    height: 260px;
+    position: relative;
+  }
+  .chladni-sim .ring {
+    position: absolute;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+  }
+  .chladni-sim .ring:nth-child(1) { width: 100%; height: 100%; top: 0; left: 0; }
+  .chladni-sim .ring:nth-child(2) { width: 75%; height: 75%; top: 12.5%; left: 12.5%; }
+  .chladni-sim .ring:nth-child(3) { width: 50%; height: 50%; top: 25%; left: 25%; }
+  .chladni-sim .ring:nth-child(4) { width: 25%; height: 25%; top: 37.5%; left: 37.5%; }
+  .chladni-sim .line {
+    position: absolute;
+    background: rgba(255,255,255,0.15);
+  }
+  .chladni-sim .line.h { width: 100%; height: 1.5px; top: 50%; left: 0; }
+  .chladni-sim .line.v { height: 100%; width: 1.5px; left: 50%; top: 0; }
+  .chladni-sim .line.d1 {
+    width: 141%;
+    height: 1.5px;
+    top: 50%;
+    left: -20.5%;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  .chladni-sim .line.d2 {
+    width: 141%;
+    height: 1.5px;
+    top: 50%;
+    left: -20.5%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  /* Sound flow simulation */
+  .soundflow-card {
+    background: linear-gradient(135deg, #1a1a2e, #0a0a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .soundflow-sim {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 180px;
+    padding: 0 20px;
+  }
+  .soundflow-sim .wave-bar {
+    width: 4px;
+    border-radius: 2px;
+    animation: none;
+  }
+
+  /* Voice signature simulation */
+  .voice-sig-card {
+    background: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .voice-sig {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.8;
+  }
+
+  /* --- SPACING / RADIUS --- */
+  .radius-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .radius-demo {
+    aspect-ratio: 1;
+    background: #F2F2F2;
+    border: 2px solid #E6E6E6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .radius-demo .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .radius-demo .token {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 0.04em;
+  }
+
+  /* --- TONE OF VOICE --- */
+  .voice-principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .voice-principle {
+    border: 1px solid #E6E6E6;
+    border-radius: 16px;
+    padding: 32px;
+  }
+  .voice-principle h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .voice-principle p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .voice-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .voice-example {
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .voice-example.dont { background: #FEF3F2; border-left: 4px solid var(--red); }
+  .voice-example.do { background: #ECFDF4; border-left: 4px solid var(--green); }
+  .voice-example .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .voice-example.dont .label { color: var(--red); }
+  .voice-example.do .label { color: #059669; }
+  .voice-example p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* --- UI SIMULATIONS --- */
+  .ui-sim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+  .ui-card {
+    background: #fff;
+    border: 1px solid #E6E6E6;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .ui-card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #F2F2F2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .ui-card-header .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .ui-card-header .title {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .ui-card-body {
+    padding: 20px;
+  }
+  .ui-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .ui-btn.primary { background: #000; color: #fff; }
+  .ui-btn.secondary { background: #F2F2F2; color: #292929; }
+  .ui-btn.accent { background: var(--blue); color: #fff; }
+  .ui-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: #292929;
+    margin-bottom: 12px;
+    background: #fff;
+  }
+  .ui-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* Waveform bars in UI card */
+  .mini-waveform {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 32px;
+    margin: 12px 0;
+  }
+  .mini-waveform .bar {
+    width: 3px;
+    border-radius: 1.5px;
+    background: #000;
+  }
+
+  /* --- MOTION --- */
+  .motion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+  .motion-card {
+    border-radius: 16px;
+    padding: 32px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .motion-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .motion-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* --- ACCESSIBILITY --- */
+  .a11y-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .a11y-demo {
+    border-radius: 16px;
+    padding: 32px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .a11y-demo .sample-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .a11y-demo .contrast-info {
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.7;
+  }
+
+  /* --- RELEVANCE --- */
+  .relevance {
+    background: #000;
+    color: #fff;
+  }
+  .relevance .section-label { color: #666; }
+  .relevance .section-intro { color: #999; }
+  .relevance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .relevance-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 32px;
+  }
+  .relevance-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .relevance-card p {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6;
+  }
+  .relevance-card .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .relevance-card .tag.adopt { background: rgba(73,242,141,0.15); color: var(--green); }
+  .relevance-card .tag.adapt { background: rgba(255,110,29,0.15); color: var(--orange); }
+  .relevance-card .tag.study { background: rgba(185,81,251,0.15); color: var(--purple); }
+  .relevance-card .tag.avoid { background: rgba(254,69,29,0.15); color: var(--red); }
+
+  /* --- FOOTER --- */
+  .footer {
+    padding: 40px 60px;
+    border-top: 1px solid #E6E6E6;
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer a { color: #666; text-decoration: none; }
+  .footer a:hover { color: #000; }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="chladni-bg"></div>
+  <div class="hero-badge">Reconstructed Brand Reference</div>
+  <h1>Eleven<span class="thin">Labs</span></h1>
+  <p>The voice of AI. A brand system built around sound made visible — Chladni patterns, voice signatures, and a monochrome-first palette with nine expressive hues. Rebranded by Basement Studio × AREA 17.</p>
+</div>
+
+<!-- ============ LOGO ============ -->
+<div class="section">
+  <div class="section-label">01 — Logo</div>
+  <h2>The Wordmark & Symbol</h2>
+  <p class="section-intro">The 11 icon abstracts the number eleven while referencing the pause icon from audio players — a dual symbolism connecting the company name to its core technology. The wordmark uses a custom typeface with subtly condensed, squarish letterforms that echo the icon's verticality.</p>
+
+  <div class="logo-grid">
+    <div class="logo-card dark">
+      <div class="logo-mark">
+        <div class="logo-icon white"><div class="bar"></div><div class="bar"></div></div>
+        <div class="logo-wordmark white">ElevenLabs</div>
+      </div>
+    </div>
+    <div class="logo-card light">
+      <div class="logo-mark">
+        <div class="logo-icon black"><div class="bar"></div><div class="bar"></div></div>
+        <div class="logo-wordmark black">ElevenLabs</div>
+      </div>
+    </div>
+    <div class="logo-card photo" style="grid-column: span 2;">
+      <div class="logo-mark" style="position:relative;z-index:1;">
+        <div class="logo-icon white"><div class="bar"></div><div class="bar"></div></div>
+        <div class="logo-wordmark white">ElevenLabs</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-rules">
+    <div class="logo-rule">
+      <h4>Clear Space</h4>
+      <p>Minimum clearance equal to the logo's full height on all sides. All communications must maintain this area unobstructed.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Color Modes</h4>
+      <p>Black on light backgrounds (primary), white on dark/photography. No other color application. Never recreate with different fonts.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Restrictions</h4>
+      <p>No stacking, no shorthand versions, no effects or strokes, no rotation, no stretching. The logotype is fixed and inviolable.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 11 ICON ============ -->
+<div class="section" style="background: #FAFAFA;">
+  <div class="section-label">02 — The 11 Symbol</div>
+  <h2>Two Lines, Double Meaning</h2>
+  <p class="section-intro">The standalone symbol works independently of the wordmark — on app icons, favicons, and as a brand shorthand. Its placement follows strict centering rules with generous surrounding space.</p>
+
+  <div class="icon-demo">
+    <div class="icon-shape dark-bg">
+      <div class="bar" style="background:#fff;"></div>
+      <div class="bar" style="background:#fff;"></div>
+    </div>
+    <div class="icon-shape dark-bg circle">
+      <div class="bar" style="background:#fff;"></div>
+      <div class="bar" style="background:#fff;"></div>
+    </div>
+    <div class="icon-shape light-bg">
+      <div class="bar" style="background:#000;"></div>
+      <div class="bar" style="background:#000;"></div>
+    </div>
+    <div class="icon-meaning">
+      <h3>Eleven ‖ Pause</h3>
+      <p>The numeral 11 and the audio pause icon occupy the same visual form. This conceptual density makes it one of the more clever tech logos — instantly recognizable, deeply meaningful, and irreducibly simple.</p>
+    </div>
+  </div>
+
+  <div class="logo-rules">
+    <div class="logo-rule">
+      <h4>App Icons</h4>
+      <p>Circle or square holding shapes. Icon surrounded by space equal to 3× the icon height for proper breathing room.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Placement</h4>
+      <p>Always centered both vertically and horizontally within its container. Avoid placing near edges or in corners.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Model Naming</h4>
+      <p>Uses the 11 symbol + model name in the Eleven font + version number. Example: ‖ Eleven English V2.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ COLORS ============ -->
+<div class="section">
+  <div class="section-label">03 — Color System</div>
+  <h2>9 Hues × 11 Tints</h2>
+  <p class="section-intro">The color system is built from 9 distinct hues, each expanded into 11 tints — 99 colors total that form the foundation of the entire brand palette. A monochrome-first approach keeps the primary identity in black, white, and neutrals, while the chromatic palette provides expressive range for marketing and product contexts.</p>
+
+  <h3 class="color-section-header">Core Neutrals</h3>
+  <div class="monochrome-strip">
+    <div class="swatch" style="background:#FFFFFF;border:1px solid #E6E6E6;"><span style="color:#999;">White</span></div>
+    <div class="swatch" style="background:#F2F2F2;"><span style="color:#999;">N50</span></div>
+    <div class="swatch" style="background:#E6E6E6;"><span style="color:#666;">N100</span></div>
+    <div class="swatch" style="background:#CCCCCC;"><span style="color:#666;">N200</span></div>
+    <div class="swatch" style="background:#B3B3B3;"><span style="color:#666;">N300</span></div>
+    <div class="swatch" style="background:#999999;"><span style="color:#fff;">N400</span></div>
+    <div class="swatch" style="background:#808080;"><span style="color:#fff;">N500</span></div>
+    <div class="swatch" style="background:#666666;"><span style="color:#fff;">N600</span></div>
+    <div class="swatch" style="background:#4D4D4D;"><span style="color:#fff;">N700</span></div>
+    <div class="swatch" style="background:#333333;"><span style="color:#fff;">N800</span></div>
+    <div class="swatch" style="background:#292929;"><span style="color:#fff;">N900</span></div>
+    <div class="swatch" style="background:#1A1A1A;"><span style="color:#fff;">N950</span></div>
+    <div class="swatch" style="background:#000000;"><span style="color:#fff;">Black</span></div>
+  </div>
+
+  <h3 class="color-section-header">Expressive Palette (High Saturation Accents)</h3>
+  <div class="expressive-grid">
+    <div class="exp-swatch" style="background: var(--purple);">
+      <span class="name" style="color:#fff;">Purple</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#B951FB</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--magenta);">
+      <span class="name" style="color:#fff;">Magenta</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#EC5CDB</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--red);">
+      <span class="name" style="color:#fff;">Red</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#FE451D</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--orange);">
+      <span class="name" style="color:#fff;">Orange</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#FF6E1D</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--yellow);">
+      <span class="name" style="color:#292929;">Yellow</span>
+      <span class="hex" style="color:rgba(0,0,0,0.6);">#F5F15C</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--green);">
+      <span class="name" style="color:#292929;">Green</span>
+      <span class="hex" style="color:rgba(0,0,0,0.6);">#49F28D</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--teal);">
+      <span class="name" style="color:#292929;">Teal</span>
+      <span class="hex" style="color:rgba(0,0,0,0.6);">#50F8D4</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--cyan);">
+      <span class="name" style="color:#fff;">Cyan</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#1AC6F6</span>
+    </div>
+    <div class="exp-swatch" style="background: var(--blue);">
+      <span class="name" style="color:#fff;">Blue</span>
+      <span class="hex" style="color:rgba(255,255,255,0.8);">#2857FF</span>
+    </div>
+  </div>
+
+  <h3 class="color-section-header">Full Tint Ranges (Lightest → Darkest)</h3>
+  <div style="margin-bottom: 24px;">
+    <div class="hue-row">
+      <span class="hue-label">Purple</span>
+      <div class="hue-cell" style="background:#FBF6FE;"></div>
+      <div class="hue-cell" style="background:#F0E0FD;"></div>
+      <div class="hue-cell" style="background:#E2C4FB;"></div>
+      <div class="hue-cell" style="background:#D1A4F8;"></div>
+      <div class="hue-cell" style="background:#C085F5;"></div>
+      <div class="hue-cell" style="background:#B951FB;"></div>
+      <div class="hue-cell" style="background:#9A3DD4;"></div>
+      <div class="hue-cell" style="background:#7B2EAD;"></div>
+      <div class="hue-cell" style="background:#5D2186;"></div>
+      <div class="hue-cell" style="background:#441962;"></div>
+      <div class="hue-cell" style="background:#32123E;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Magenta</span>
+      <div class="hue-cell" style="background:#FCF2FB;"></div>
+      <div class="hue-cell" style="background:#F7DDF5;"></div>
+      <div class="hue-cell" style="background:#F0C0EC;"></div>
+      <div class="hue-cell" style="background:#E89FE2;"></div>
+      <div class="hue-cell" style="background:#E07ED8;"></div>
+      <div class="hue-cell" style="background:#EC5CDB;"></div>
+      <div class="hue-cell" style="background:#C44AB7;"></div>
+      <div class="hue-cell" style="background:#9D3993;"></div>
+      <div class="hue-cell" style="background:#772A6F;"></div>
+      <div class="hue-cell" style="background:#581C52;"></div>
+      <div class="hue-cell" style="background:#3F0D35;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Red</span>
+      <div class="hue-cell" style="background:#FEF3F2;"></div>
+      <div class="hue-cell" style="background:#FDD9D5;"></div>
+      <div class="hue-cell" style="background:#FBB5AD;"></div>
+      <div class="hue-cell" style="background:#F99185;"></div>
+      <div class="hue-cell" style="background:#F76D5D;"></div>
+      <div class="hue-cell" style="background:#FE451D;"></div>
+      <div class="hue-cell" style="background:#D43818;"></div>
+      <div class="hue-cell" style="background:#AA2C14;"></div>
+      <div class="hue-cell" style="background:#802110;"></div>
+      <div class="hue-cell" style="background:#60170C;"></div>
+      <div class="hue-cell" style="background:#440D0B;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Orange</span>
+      <div class="hue-cell" style="background:#FFF7ED;"></div>
+      <div class="hue-cell" style="background:#FFE8D0;"></div>
+      <div class="hue-cell" style="background:#FFD3A8;"></div>
+      <div class="hue-cell" style="background:#FFBB7D;"></div>
+      <div class="hue-cell" style="background:#FFA252;"></div>
+      <div class="hue-cell" style="background:#FF6E1D;"></div>
+      <div class="hue-cell" style="background:#D45B18;"></div>
+      <div class="hue-cell" style="background:#AA4914;"></div>
+      <div class="hue-cell" style="background:#803710;"></div>
+      <div class="hue-cell" style="background:#5C2A0A;"></div>
+      <div class="hue-cell" style="background:#492104;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Yellow</span>
+      <div class="hue-cell" style="background:#FCFCEA;"></div>
+      <div class="hue-cell" style="background:#F9F8C8;"></div>
+      <div class="hue-cell" style="background:#F7F4A3;"></div>
+      <div class="hue-cell" style="background:#F5F17E;"></div>
+      <div class="hue-cell" style="background:#F5F15C;"></div>
+      <div class="hue-cell" style="background:#E0DC3C;"></div>
+      <div class="hue-cell" style="background:#B8B430;"></div>
+      <div class="hue-cell" style="background:#908C24;"></div>
+      <div class="hue-cell" style="background:#6A6618;"></div>
+      <div class="hue-cell" style="background:#504A10;"></div>
+      <div class="hue-cell" style="background:#3E240A;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Green</span>
+      <div class="hue-cell" style="background:#ECFDF4;"></div>
+      <div class="hue-cell" style="background:#CFF9E2;"></div>
+      <div class="hue-cell" style="background:#A8F4CA;"></div>
+      <div class="hue-cell" style="background:#80EFB2;"></div>
+      <div class="hue-cell" style="background:#58EA9A;"></div>
+      <div class="hue-cell" style="background:#49F28D;"></div>
+      <div class="hue-cell" style="background:#30C870;"></div>
+      <div class="hue-cell" style="background:#1F9F55;"></div>
+      <div class="hue-cell" style="background:#10783C;"></div>
+      <div class="hue-cell" style="background:#08522A;"></div>
+      <div class="hue-cell" style="background:#022C20;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Teal</span>
+      <div class="hue-cell" style="background:#EAFDF9;"></div>
+      <div class="hue-cell" style="background:#C8F9EF;"></div>
+      <div class="hue-cell" style="background:#9FF5E3;"></div>
+      <div class="hue-cell" style="background:#78F0D8;"></div>
+      <div class="hue-cell" style="background:#50F8D4;"></div>
+      <div class="hue-cell" style="background:#38D4B5;"></div>
+      <div class="hue-cell" style="background:#28AA93;"></div>
+      <div class="hue-cell" style="background:#1A8072;"></div>
+      <div class="hue-cell" style="background:#0F5852;"></div>
+      <div class="hue-cell" style="background:#094240;"></div>
+      <div class="hue-cell" style="background:#072C2B;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Cyan</span>
+      <div class="hue-cell" style="background:#EEFBFD;"></div>
+      <div class="hue-cell" style="background:#CFF4FA;"></div>
+      <div class="hue-cell" style="background:#A6EBF7;"></div>
+      <div class="hue-cell" style="background:#7CE1F4;"></div>
+      <div class="hue-cell" style="background:#52D7F0;"></div>
+      <div class="hue-cell" style="background:#1AC6F6;"></div>
+      <div class="hue-cell" style="background:#14A3CC;"></div>
+      <div class="hue-cell" style="background:#0F80A3;"></div>
+      <div class="hue-cell" style="background:#0B5E7A;"></div>
+      <div class="hue-cell" style="background:#08475C;"></div>
+      <div class="hue-cell" style="background:#0D2F3F;"></div>
+    </div>
+    <div class="hue-row">
+      <span class="hue-label">Blue</span>
+      <div class="hue-cell" style="background:#F2F5FC;"></div>
+      <div class="hue-cell" style="background:#DDE4F8;"></div>
+      <div class="hue-cell" style="background:#C0CBF2;"></div>
+      <div class="hue-cell" style="background:#A0AEEB;"></div>
+      <div class="hue-cell" style="background:#7F91E4;"></div>
+      <div class="hue-cell" style="background:#2857FF;"></div>
+      <div class="hue-cell" style="background:#4A6CB4;"></div>
+      <div class="hue-cell" style="background:#3A558E;"></div>
+      <div class="hue-cell" style="background:#2C3F6A;"></div>
+      <div class="hue-cell" style="background:#283557;"></div>
+      <div class="hue-cell" style="background:#252846;"></div>
+    </div>
+  </div>
+
+  <div class="semantic-cards">
+    <div class="semantic-card">
+      <h4>Text Color</h4>
+      <p>Tint 800 from any hue — dark enough for strong legibility on light backgrounds while retaining color identity.</p>
+    </div>
+    <div class="semantic-card">
+      <h4>Background Color</h4>
+      <p>Tint 200 — provides a whisper of color as a background while maintaining readability for dark text layered above.</p>
+    </div>
+    <div class="semantic-card">
+      <h4>Icon Color</h4>
+      <p>Tint 600 — the mid-range sweet spot. Visible against both light and dark contexts, rich without overpowering.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TYPOGRAPHY ============ -->
+<div class="section" style="background: #FAFAFA;">
+  <div class="section-label">04 — Typography</div>
+  <h2>Eleven — Custom Typeface</h2>
+  <p class="section-intro">The brand uses a proprietary font family called "Eleven" (based on a customized Waldenburg with a single-story "a") in two cuts: Normal for body text and Semi Condensed for headings and UI. Three weights — Normal, Medium, Bold. Noto Sans covers non-Latin scripts.</p>
+
+  <div class="type-hero">
+    <div class="display" style="font-family:'Nunito Sans',sans-serif;">Every voice deserves to be heard.</div>
+    <div class="subtitle">Nunito Sans standing in for proprietary Eleven typeface</div>
+  </div>
+
+  <div class="type-cuts">
+    <div class="type-cut">
+      <div class="type-cut-label">Eleven Semi Condensed</div>
+      <div class="type-cut-sample semi-condensed">Headings & UI Elements</div>
+      <p class="type-cut-desc">Used for all headings (functional and expressive) and interactive UI elements. Echoes the vertical compression of the 11 icon. Bold weight is default for headings. Expressive variant uses ALL CAPS with wide letter-spacing.</p>
+    </div>
+    <div class="type-cut">
+      <div class="type-cut-label">Eleven Normal</div>
+      <div class="type-cut-sample normal">Paragraph text and functional content across all platforms</div>
+      <p class="type-cut-desc">More functional and open. Used for all body copy with increased letter-spacing and generous line height. Normal weight is default. The single-story "a" distinguishes it from standard Waldenburg.</p>
+    </div>
+  </div>
+
+  <div class="type-weights">
+    <div class="type-weight">
+      <div class="type-weight-name">Normal (400)</div>
+      <div class="type-weight-sample" style="font-weight:400;">Aa Bb Cc</div>
+      <p class="type-weight-usage">Default for body text, paragraphs, and most running content. The workhorse weight.</p>
+    </div>
+    <div class="type-weight">
+      <div class="type-weight-name">Medium (500)</div>
+      <div class="type-weight-sample" style="font-weight:500;">Aa Bb Cc</div>
+      <p class="type-weight-usage">Functional UI — buttons, labels, navigation. Provides subtle contrast without the heaviness of bold.</p>
+    </div>
+    <div class="type-weight">
+      <div class="type-weight-name">Bold (700)</div>
+      <div class="type-weight-sample" style="font-weight:700;">Aa Bb Cc</div>
+      <p class="type-weight-usage">Default for headings and strong emphasis. Used in both functional and expressive contexts.</p>
+    </div>
+  </div>
+
+  <h3 class="color-section-header">Type Scale</h3>
+  <div class="type-scale">
+    <div class="type-scale-row">
+      <span class="type-scale-label">Display 1</span>
+      <span class="type-scale-sample" style="font-size:100px;font-weight:700;letter-spacing:-0.03em;line-height:1;">Voice</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Display 2</span>
+      <span class="type-scale-sample" style="font-size:72px;font-weight:700;letter-spacing:-0.03em;line-height:1.05;">Every voice</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Display 3</span>
+      <span class="type-scale-sample" style="font-size:48px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;">Turn text into speech</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H1</span>
+      <span class="type-scale-sample" style="font-size:36px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">Create natural sounding voices</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H2</span>
+      <span class="type-scale-sample" style="font-size:28px;font-weight:700;line-height:1.3;">Multilingual voice generation</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H3</span>
+      <span class="type-scale-sample" style="font-size:22px;font-weight:700;line-height:1.35;">Voice cloning technology</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Body</span>
+      <span class="type-scale-sample" style="font-size:16px;font-weight:400;line-height:1.65;letter-spacing:0.01em;">ElevenLabs creates the most realistic, versatile, and contextually-aware AI audio, providing the ability to generate speech in hundreds of new and existing voices in 29 languages.</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Small</span>
+      <span class="type-scale-sample" style="font-size:14px;font-weight:400;line-height:1.5;letter-spacing:0.01em;">Caption and secondary text for supporting information.</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">XS / Label</span>
+      <span class="type-scale-sample" style="font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.04em;text-transform:uppercase;">Overline Label</span>
+    </div>
+  </div>
+
+  <h3 class="color-section-header">Heading Modes</h3>
+  <div class="type-usage-grid">
+    <div class="type-usage-card">
+      <div class="type-usage-label">Expressive — Marketing</div>
+      <div class="expressive-heading">THE VOICE<br>OF AI</div>
+      <p class="body-text">Uppercase, wide letter-spacing, Semi Condensed Bold. Used for impact in marketing materials and hero sections. Differentiates promotional content from functional UI.</p>
+    </div>
+    <div class="type-usage-card light">
+      <div class="type-usage-label">Functional — Product</div>
+      <div class="functional-heading" style="color:#292929;">Voice Library</div>
+      <p class="body-text" style="color:#666;">Standard case, Semi Condensed Bold, tighter spacing. Used for product headings, navigation, and functional contexts where clarity outweighs expression.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GRAPHIC ELEMENTS ============ -->
+<div class="section">
+  <div class="section-label">05 — Graphic Language</div>
+  <h2>Sound Made Visible</h2>
+  <p class="section-intro">Three signature graphic elements connect the visual identity to audio technology: Chladni patterns (physics of sound), Sound Flow (waveform visualization), and Voice Signatures (visual fingerprints of individual voices). Each has static, resting, and reactive states.</p>
+
+  <div class="graphic-grid">
+    <div class="graphic-card chladni-card">
+      <div class="chladni-sim">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="line h"></div>
+        <div class="line v"></div>
+        <div class="line d1"></div>
+        <div class="line d2"></div>
+      </div>
+      <div class="overlay">
+        <h3>Chladni Patterns</h3>
+        <p>Geometric shapes created by sound vibrating a surface. A physical phenomenon turned brand metaphor — how sound creates structure and beauty. Generated via a custom tool that transforms math into remixable brand graphics.</p>
+      </div>
+    </div>
+
+    <div class="graphic-card soundflow-card">
+      <div class="soundflow-sim">
+        <!-- Generate wave bars with varied heights and gradient colors -->
+        <div class="wave-bar" style="height:30px;background:linear-gradient(to top,#B951FB,#EC5CDB);"></div>
+        <div class="wave-bar" style="height:55px;background:linear-gradient(to top,#B951FB,#EC5CDB);"></div>
+        <div class="wave-bar" style="height:85px;background:linear-gradient(to top,#EC5CDB,#FE451D);"></div>
+        <div class="wave-bar" style="height:120px;background:linear-gradient(to top,#FE451D,#FF6E1D);"></div>
+        <div class="wave-bar" style="height:150px;background:linear-gradient(to top,#FF6E1D,#F5F15C);"></div>
+        <div class="wave-bar" style="height:170px;background:linear-gradient(to top,#F5F15C,#49F28D);"></div>
+        <div class="wave-bar" style="height:155px;background:linear-gradient(to top,#49F28D,#50F8D4);"></div>
+        <div class="wave-bar" style="height:130px;background:linear-gradient(to top,#50F8D4,#1AC6F6);"></div>
+        <div class="wave-bar" style="height:100px;background:linear-gradient(to top,#1AC6F6,#2857FF);"></div>
+        <div class="wave-bar" style="height:140px;background:linear-gradient(to top,#2857FF,#B951FB);"></div>
+        <div class="wave-bar" style="height:165px;background:linear-gradient(to top,#B951FB,#EC5CDB);"></div>
+        <div class="wave-bar" style="height:145px;background:linear-gradient(to top,#EC5CDB,#FE451D);"></div>
+        <div class="wave-bar" style="height:110px;background:linear-gradient(to top,#FE451D,#FF6E1D);"></div>
+        <div class="wave-bar" style="height:80px;background:linear-gradient(to top,#FF6E1D,#F5F15C);"></div>
+        <div class="wave-bar" style="height:50px;background:linear-gradient(to top,#F5F15C,#49F28D);"></div>
+        <div class="wave-bar" style="height:75px;background:linear-gradient(to top,#49F28D,#50F8D4);"></div>
+        <div class="wave-bar" style="height:105px;background:linear-gradient(to top,#50F8D4,#1AC6F6);"></div>
+        <div class="wave-bar" style="height:135px;background:linear-gradient(to top,#1AC6F6,#2857FF);"></div>
+        <div class="wave-bar" style="height:160px;background:linear-gradient(to top,#2857FF,#B951FB);"></div>
+        <div class="wave-bar" style="height:140px;background:linear-gradient(to top,#B951FB,#EC5CDB);"></div>
+        <div class="wave-bar" style="height:115px;background:linear-gradient(to top,#EC5CDB,#FE451D);"></div>
+        <div class="wave-bar" style="height:85px;background:linear-gradient(to top,#FE451D,#FF6E1D);"></div>
+        <div class="wave-bar" style="height:60px;background:linear-gradient(to top,#FF6E1D,#F5F15C);"></div>
+        <div class="wave-bar" style="height:40px;background:linear-gradient(to top,#F5F15C,#49F28D);"></div>
+        <div class="wave-bar" style="height:25px;background:linear-gradient(to top,#49F28D,#50F8D4);"></div>
+      </div>
+      <div class="overlay">
+        <h3>Sound Flow</h3>
+        <p>A layered waveform visualization using 7 gradient stops across the color palette. Described as "warm chrome" — engineering precision blended with human warmth. Three states: static, resting (calm animation), reactive (responds to audio input).</p>
+      </div>
+    </div>
+
+    <div class="graphic-card voice-sig-card" style="grid-column: span 2;">
+      <div class="voice-sig" style="background: radial-gradient(circle, #B951FB, #7B2EAD 60%, transparent 100%);"></div>
+      <div class="voice-sig" style="background: radial-gradient(circle, #FF6E1D, #D45B18 60%, transparent 100%);"></div>
+      <div class="voice-sig" style="background: radial-gradient(circle, #1AC6F6, #0F80A3 60%, transparent 100%);"></div>
+      <div class="voice-sig" style="background: radial-gradient(circle, #49F28D, #1F9F55 60%, transparent 100%);"></div>
+      <div class="voice-sig" style="background: radial-gradient(circle, #FE451D, #AA2C14 60%, transparent 100%);"></div>
+      <div style="max-width: 280px;">
+        <h3 style="font-size:20px;font-weight:600;margin-bottom:8px;color:#292929;">Voice Signatures</h3>
+        <p style="font-size:13px;line-height:1.5;color:#666;">Visual fingerprints of individual voices. Pitch maps to lightness, expressivity to saturation, timbre to texture (smooth/blurred vs rough/sharp). Hue is randomly assigned. Each voice gets a unique visual identity.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPACING & RADIUS ============ -->
+<div class="section" style="background: #FAFAFA;">
+  <div class="section-label">06 — Spacing & Radius</div>
+  <h2>Component Geometry</h2>
+  <p class="section-intro">A 6-token radius scale creates visual consistency across all components — from tight functional elements (4px) to fully rounded pills (999px). Cards use consistent corner radii across marketing and product contexts.</p>
+
+  <div class="radius-grid">
+    <div class="radius-demo" style="border-radius: 4px;">
+      <span class="value">4px</span>
+      <span class="token">radius-sm</span>
+    </div>
+    <div class="radius-demo" style="border-radius: 8px;">
+      <span class="value">8px</span>
+      <span class="token">radius-md</span>
+    </div>
+    <div class="radius-demo" style="border-radius: 12px;">
+      <span class="value">12px</span>
+      <span class="token">radius-lg</span>
+    </div>
+    <div class="radius-demo" style="border-radius: 20px;">
+      <span class="value">20px</span>
+      <span class="token">radius-xl</span>
+    </div>
+    <div class="radius-demo" style="border-radius: 28px;">
+      <span class="value">28px</span>
+      <span class="token">radius-2xl</span>
+    </div>
+    <div class="radius-demo" style="border-radius: 999px;">
+      <span class="value">999px</span>
+      <span class="token">radius-full</span>
+    </div>
+  </div>
+
+  <div class="logo-rules">
+    <div class="logo-rule">
+      <h4>Grid System</h4>
+      <p>12-column responsive grid. Breakpoints from small (600px) through extra-large (1920px+). Gutters scale from 0.5rem inner to 4rem outer.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Card Design</h4>
+      <p>Cards are the foundational UI element — used consistently across marketing site and product. Range from functional (data) to expressive (marketing hero).</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Icons</h4>
+      <p>32×32 base grid. Scale: 16/24/32/64px. 2px stroke base. Half and full roundness endpoints. Established metaphors over novelty.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TONE OF VOICE ============ -->
+<div class="section">
+  <div class="section-label">07 — Tone of Voice</div>
+  <h2>Efficient, Simple, Clear, Fresh</h2>
+  <p class="section-intro">ElevenLabs writes with the precision of engineering and the directness of conversation. No vague advertising language, no jargon, no filler. Active voice, verifiable claims, and respect for the reader's time.</p>
+
+  <div class="voice-principles">
+    <div class="voice-principle">
+      <h3>Efficiency</h3>
+      <p>Brief, well-engineered language. Every word earns its place. Respect the reader's time — if something can be said in fewer words, it should be.</p>
+    </div>
+    <div class="voice-principle">
+      <h3>Simplicity</h3>
+      <p>Everyday speech over formal or legal language. Active voice over passive. If your grandmother wouldn't understand it, rewrite it.</p>
+    </div>
+    <div class="voice-principle">
+      <h3>Clarity</h3>
+      <p>Verifiable claims only. No "groundbreaking," no "paradigm shift," no vague superlatives. State what the technology does, not what adjectives you wish applied to it.</p>
+    </div>
+    <div class="voice-principle">
+      <h3>Freshness</h3>
+      <p>Engaging titles, moving narrative, minimal scene-setting. Get to the point, make it interesting, and don't pad the introduction.</p>
+    </div>
+  </div>
+
+  <div class="voice-examples">
+    <div class="voice-example dont">
+      <div class="label">Avoid</div>
+      <p>"Our groundbreaking, state-of-the-art voice synthesis platform leverages cutting-edge neural networks to deliver a paradigm-shifting audio experience."</p>
+    </div>
+    <div class="voice-example do">
+      <div class="label">Prefer</div>
+      <p>"Turn text into natural-sounding speech in 29 languages. Clone a voice in seconds."</p>
+    </div>
+  </div>
+
+  <div class="logo-rules">
+    <div class="logo-rule">
+      <h4>Brand Name</h4>
+      <p>Always "ElevenLabs" — capital E, capital L, no space, no variations. Never "Eleven Labs," "elevenlabs," or "ELEVENLABS."</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Text Formatting</h4>
+      <p>Sentence case everywhere. Left-aligned by default. Hanging punctuation for pullquotes. Enable "case-sensitive forms" when using uppercase.</p>
+    </div>
+    <div class="logo-rule">
+      <h4>Watermarks</h4>
+      <p>Logo + uppercase product reference, bottom-right corner. Applied to free-tier content for brand awareness and safety signaling.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ UI SIMULATIONS ============ -->
+<div class="section" style="background: #FAFAFA;">
+  <div class="section-label">08 — UI Components</div>
+  <h2>Product Interface Patterns</h2>
+  <p class="section-intro">A utilitarian, flat design philosophy: no gradients, no heavy shadows, no decorative elements. Cards, buttons, inputs, and the Omnibox use neutral colors with consistent radius tokens. The same visual language spans marketing site and product.</p>
+
+  <div class="ui-sim-grid">
+    <div class="ui-card">
+      <div class="ui-card-header">
+        <div class="dot" style="background:var(--green);"></div>
+        <span class="title">Text to Speech</span>
+      </div>
+      <div class="ui-card-body">
+        <span class="ui-label">Input Text</span>
+        <div class="ui-input" style="color:#999;">Enter your text here...</div>
+        <div style="display:flex;gap:8px;">
+          <span class="ui-btn primary" style="flex:1;">Generate</span>
+          <span class="ui-btn secondary">Settings</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <div class="ui-card-header">
+        <div class="dot" style="background:var(--purple);"></div>
+        <span class="title">Voice Library</span>
+      </div>
+      <div class="ui-card-body">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--blue));"></div>
+          <div>
+            <div style="font-size:13px;font-weight:600;">Sarah</div>
+            <div style="font-size:11px;color:#999;">Warm, conversational</div>
+          </div>
+        </div>
+        <div class="mini-waveform">
+          <div class="bar" style="height:8px;"></div>
+          <div class="bar" style="height:16px;"></div>
+          <div class="bar" style="height:24px;"></div>
+          <div class="bar" style="height:32px;"></div>
+          <div class="bar" style="height:20px;"></div>
+          <div class="bar" style="height:28px;"></div>
+          <div class="bar" style="height:14px;"></div>
+          <div class="bar" style="height:22px;"></div>
+          <div class="bar" style="height:30px;"></div>
+          <div class="bar" style="height:18px;"></div>
+          <div class="bar" style="height:10px;"></div>
+          <div class="bar" style="height:26px;"></div>
+          <div class="bar" style="height:32px;"></div>
+          <div class="bar" style="height:20px;"></div>
+          <div class="bar" style="height:12px;"></div>
+        </div>
+        <span class="ui-btn secondary" style="width:100%;display:block;text-align:center;">Preview Voice</span>
+      </div>
+    </div>
+
+    <div class="ui-card">
+      <div class="ui-card-header">
+        <div class="dot" style="background:var(--orange);"></div>
+        <span class="title">Projects</span>
+      </div>
+      <div class="ui-card-body">
+        <div style="padding:12px;background:#F8F8F8;border-radius:8px;margin-bottom:12px;">
+          <div style="font-size:13px;font-weight:600;">Podcast Episode 12</div>
+          <div style="font-size:11px;color:#999;margin-top:2px;">3 voices · 12 min · Draft</div>
+        </div>
+        <div style="padding:12px;background:#F8F8F8;border-radius:8px;margin-bottom:12px;">
+          <div style="font-size:13px;font-weight:600;">Product Demo</div>
+          <div style="font-size:11px;color:#999;margin-top:2px;">1 voice · 2 min · Complete</div>
+        </div>
+        <span class="ui-btn accent" style="width:100%;display:block;text-align:center;">New Project</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MOTION ============ -->
+<div class="section">
+  <div class="section-label">09 — Motion & Animation</div>
+  <h2>Four Motion Systems</h2>
+  <p class="section-intro">Motion in the ElevenLabs brand is never decorative — it's tied to audio behavior. Captioning syncs text to speech, Chime pairs voice signatures with typography, Echo layers sound flow with text, and the logo animation has two placement variants.</p>
+
+  <div class="motion-grid">
+    <div class="motion-card" style="background: #000; color: #fff;">
+      <h3>Captioning</h3>
+      <p style="color:#999;">By-word (expressive social), by-sentence (voice-overs), multilingual (language showcase). Text appearance synchronized with generated speech.</p>
+    </div>
+    <div class="motion-card" style="background: linear-gradient(135deg, #1a1a2e, #2a1f3d); color: #fff;">
+      <h3>Chime</h3>
+      <p style="color:#aaa;">Combines Voice Signatures with kinetic typography. Two titling modes: linear left-to-right reveal and random appearance. Synced to ElevenLabs speech output.</p>
+    </div>
+    <div class="motion-card" style="background: #F2F2F2; color: #292929;">
+      <h3>Echo</h3>
+      <p style="color:#666;">Layers Sound Flow with typography in monochrome or the full 9-color palette. Expresses depth and emotional range of the voice technology.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ACCESSIBILITY ============ -->
+<div class="section" style="background: #FAFAFA;">
+  <div class="section-label">10 — Accessibility</div>
+  <h2>AA Compliance Throughout</h2>
+  <p class="section-intro">Accessibility is fundamental to ElevenLabs' identity, not an afterthought. The entire 99-color system was designed with straightforward pairing rules that enforce AA compliance. Every tint-to-tint combination follows predictable contrast patterns.</p>
+
+  <div class="a11y-grid">
+    <div class="a11y-demo" style="background:#000;color:#fff;">
+      <div class="sample-text">White on Black</div>
+      <div class="contrast-info">21:1 contrast ratio — WCAG AAA ✓</div>
+    </div>
+    <div class="a11y-demo" style="background:#F2F2F2;color:#292929;">
+      <div class="sample-text">N900 on N50</div>
+      <div class="contrast-info">~14.5:1 contrast ratio — WCAG AAA ✓</div>
+    </div>
+    <div class="a11y-demo" style="background:#ECFDF4;color:#022C20;">
+      <div class="sample-text">Green 950 on Green 50</div>
+      <div class="contrast-info">Tint 950 on Tint 50 — AA compliant ✓</div>
+    </div>
+    <div class="a11y-demo" style="background:#FBF6FE;color:#32123E;">
+      <div class="sample-text">Purple 950 on Purple 50</div>
+      <div class="contrast-info">Within-hue extremes — AA compliant ✓</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ RELEVANCE TO WAYFOLK ============ -->
+<div class="section relevance">
+  <div class="section-label">11 — Relevance to WayFolk</div>
+  <h2>What to Take Away</h2>
+  <p class="section-intro">ElevenLabs is a very different product (B2B/prosumer AI tool vs. social travel graph), but several structural decisions in their brand system are directly applicable to WayFolk's visual identity build.</p>
+
+  <div class="relevance-grid">
+    <div class="relevance-card">
+      <span class="tag adopt">Adopt</span>
+      <h3>Monochrome-first, color-as-expression</h3>
+      <p>ElevenLabs' primary identity lives in black and white. Color is layered on top for emphasis, delight, and differentiation — never as the base. WayFolk could use a similar approach: a warm neutral foundation with chromatic color reserved for meaningful moments (globe interactions, folk connections, travel signals).</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag adopt">Adopt</span>
+      <h3>Systematic color architecture</h3>
+      <p>9 hues × 11 tints with semantic rules (text = 800, bg = 200, icon = 600) is a remarkably scalable system. WayFolk doesn't need 99 colors, but adopting the same structural thinking — a small set of hues with predictable tint ladders and semantic assignments — would make the brand system usable across dark mode, light mode, and the globe interface.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag adapt">Adapt</span>
+      <h3>Signature graphic rooted in product</h3>
+      <p>Chladni patterns and Voice Signatures aren't decorative — they're the physics of what ElevenLabs does, made visual. WayFolk's equivalent is the globe and the social graph. The graphic language should emerge from the product's core mechanic (connections across geography) rather than from generic illustration.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag study">Study</span>
+      <h3>Custom typeface with product DNA</h3>
+      <p>Eleven's Semi Condensed cut echoes the vertical 11 icon. The single-story "a" makes it distinct. A custom typeface is likely premature for WayFolk's stage, but choosing a font whose character echoes the brand's visual motifs (warmth, openness, the circular globe) would create similar coherence.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag adapt">Adapt</span>
+      <h3>Functional vs. expressive modes</h3>
+      <p>ElevenLabs has two typographic modes: uppercase/wide-spaced for marketing impact, standard-case for product clarity. WayFolk will need a similar distinction — the waitlist page and social content need to feel different from the in-app travel graph, while remaining recognizably the same brand.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag adopt">Adopt</span>
+      <h3>AA compliance as identity, not afterthought</h3>
+      <p>Building accessibility into the color system's foundations (rather than auditing later) means every future design decision is automatically compliant. With WayFolk's globe interface in both light and dark mode, this approach would prevent a mountain of rework.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag study">Study</span>
+      <h3>The icon that means two things</h3>
+      <p>The 11 symbol is both the brand name and a universal audio control. That double-reading makes it instantly memorable. WayFolk's wordmark — particularly how "Folk" appears — could aim for a similar conceptual density, where the visual form carries meaning beyond the letters themselves.</p>
+    </div>
+    <div class="relevance-card">
+      <span class="tag avoid">Differ</span>
+      <h3>Cold precision → warm human energy</h3>
+      <p>ElevenLabs' tone is engineering-first: efficient, no-nonsense, enterprise-credible. WayFolk's approved brand voice is warmer, more conversational, and people-centered. The visual system should reflect this — softer radii, warmer neutrals (Kinfolk's territory), and more organic graphic elements than ElevenLabs' geometric precision.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+  <span>Reconstructed reference — not affiliated with ElevenLabs. For WayFolk brand exploration only.</span>
+  <span>Sources: <a href="https://elevenlabs.io/brand">elevenlabs.io/brand</a> · <a href="https://11labs-guides-dev.a17.dev/">AREA 17 Guidelines</a> · <a href="https://basement.studio/showcase/elevenlabs-visual-rebrand-for-the-voice-of-ai">Basement Studio</a> · <a href="https://fontsinuse.com/uses/62065/elevenlabs-website">Fonts in Use</a></span>
+</div>
+
+</body>
+</html>

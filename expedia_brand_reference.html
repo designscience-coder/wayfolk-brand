@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedia — Reconstructed Brand Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Primary */
+    --navy: #1E243A;
+    --yellow: #FEBF4F;
+
+    /* Extended */
+    --deep-blue: #00355F;
+    --coral: #FF6F61;
+    --white: #FFFFFF;
+    --off-white: #F8F7F5;
+    --light-grey: #F2F0ED;
+    --mid-grey: #B0ADA8;
+    --dark-grey: #6B6560;
+    --near-black: #1A1816;
+
+    /* Functional */
+    --border: #E5E2DD;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 999px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #FDFCFB;
+    color: var(--navy);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 64px 60px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 32px;
+  }
+  .hero h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 72px;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    color: var(--white);
+  }
+  .hero h1 .yellow { color: var(--yellow); }
+  .hero .subtitle {
+    margin-top: 16px;
+    font-size: 16px;
+    color: var(--mid-grey);
+    max-width: 520px;
+    line-height: 1.65;
+  }
+  /* Arrow mark in hero */
+  .hero-mark {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+    background: var(--yellow);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-mark svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 64px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: var(--dark-grey);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.65;
+  }
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    margin-bottom: 14px;
+  }
+
+  /* ===== FLAT CARDS ===== */
+  .flat-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    background: var(--white);
+  }
+  .flat-card h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    margin-bottom: 8px;
+  }
+  .flat-card p {
+    font-size: 14px;
+    color: var(--dark-grey);
+    line-height: 1.55;
+  }
+
+  /* ===== LOGO ===== */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .logo-card {
+    border-radius: var(--radius-md);
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 200px;
+  }
+  .logo-card.dark { background: var(--navy); }
+  .logo-card.light { background: var(--light-grey); }
+  .logo-card.yellow-bg { background: var(--yellow); }
+
+  .logo-mark-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .chiclet {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chiclet svg { width: 22px; height: 22px; }
+  .logo-wordmark {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+  }
+
+  .logo-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  /* ===== COLORS ===== */
+  .primary-pair {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .primary-swatch {
+    border-radius: var(--radius-md);
+    padding: 24px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .primary-swatch .name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  .primary-swatch .hex {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  .neutral-strip {
+    display: flex;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 64px;
+    margin-bottom: 8px;
+  }
+  .neutral-strip .swatch {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px 6px;
+  }
+  .neutral-strip .swatch span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.02em;
+  }
+
+  .color-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  .font-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .font-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    background: var(--white);
+  }
+  .font-card-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    margin-bottom: 14px;
+  }
+  .font-card-sample {
+    font-size: 36px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    color: var(--navy);
+  }
+  .font-card-desc {
+    font-size: 13px;
+    color: var(--dark-grey);
+    line-height: 1.5;
+  }
+
+  .type-scale-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: baseline;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-grey);
+  }
+  .type-scale-token {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-grey);
+  }
+
+  /* ===== PHOTOGRAPHY ===== */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .photo-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    background: var(--white);
+  }
+  .photo-card h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-grey);
+    margin-bottom: 8px;
+  }
+  .photo-card p {
+    font-size: 13px;
+    color: var(--dark-grey);
+    line-height: 1.6;
+  }
+
+  .photo-do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .do-card, .dont-card {
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+  .do-card {
+    background: #E8F5E9;
+    border: 1px solid #C8E6C9;
+  }
+  .dont-card {
+    background: #FBE9E7;
+    border: 1px solid #FFCCBC;
+  }
+  .do-card h4, .dont-card h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .do-card h4 { color: #2E7D32; }
+  .dont-card h4 { color: #C62828; }
+  .do-card p, .dont-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--dark-grey);
+  }
+
+  /* ===== GRAPHIC LANGUAGE ===== */
+  .graphic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .graphic-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    background: var(--white);
+  }
+  .graphic-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .graphic-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--dark-grey);
+  }
+  .graphic-card .tag-row {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .graphic-card .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--dark-grey);
+    background: var(--light-grey);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* ===== COMPONENTS ===== */
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .btn-demo {
+    padding: 12px 24px;
+    border-radius: var(--radius-lg);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+  }
+
+  .card-demo {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--white);
+    max-width: 320px;
+  }
+  .card-demo-image {
+    height: 160px;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .card-demo-content {
+    padding: 16px;
+  }
+  .card-demo-content h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .card-demo-content p {
+    font-size: 13px;
+    color: var(--dark-grey);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .card-demo-content .price {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+  .card-demo-content .price small {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--dark-grey);
+  }
+
+  /* Chip/tag demos */
+  .chip-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--navy);
+  }
+  .chip.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+  }
+
+  /* ===== TONE ===== */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .tone-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    background: var(--white);
+  }
+  .tone-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .tone-card p {
+    font-size: 13px;
+    color: var(--dark-grey);
+    line-height: 1.6;
+  }
+
+  /* ===== RELEVANCE ===== */
+  .relevance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 24px 60px;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-grey);
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-mark">
+    <svg viewBox="0 0 36 36" fill="none">
+      <path d="M8 28L28 8M28 8H14M28 8V22" stroke="#1E243A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="hero-badge">Brand Reference — Reconstructed</div>
+  <h1><span class="yellow">Expedia</span></h1>
+  <p class="subtitle">The 2021+ identity: yellow chiclet, blue arrow, Travel Sans, and the "Made to Travel" visual language. A reference reconstruction for WayFolk.</p>
+</div>
+
+<!-- ===== 01 — LOGO & MARK ===== -->
+<div class="section">
+  <div class="section-label">01 — Logo & Mark</div>
+  <h2>The Yellow Chiclet</h2>
+  <p class="section-intro">The 2021 rebrand replaced the classic blue circle + yellow airplane with a yellow square ("chiclet") containing a dark blue arrow pointing northeast. The arrow represents direction and forward movement across all travel modes — not just flights.</p>
+
+  <div class="logo-grid">
+    <div class="logo-card dark">
+      <div class="logo-mark-container">
+        <div class="chiclet" style="background:var(--yellow);">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M4 18L18 4M18 4H9M18 4V13" stroke="#1E243A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="logo-wordmark" style="color:var(--white);">expedia</span>
+      </div>
+    </div>
+    <div class="logo-card light">
+      <div class="logo-mark-container">
+        <div class="chiclet" style="background:var(--yellow);">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M4 18L18 4M18 4H9M18 4V13" stroke="#1E243A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="logo-wordmark" style="color:var(--navy);">expedia</span>
+      </div>
+    </div>
+    <div class="logo-card yellow-bg">
+      <div class="logo-mark-container">
+        <div class="chiclet" style="background:var(--navy);">
+          <svg viewBox="0 0 22 22" fill="none"><path d="M4 18L18 4M18 4H9M18 4V13" stroke="#FEBF4F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="logo-wordmark" style="color:var(--navy);">expedia</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-label">Logo Rules</div>
+  <div class="logo-rules">
+    <div class="flat-card">
+      <h4>Three Versions</h4>
+      <p>Full logo (chiclet + wordmark) above 48px height. Icon (chiclet only) below 48px. Wordmark alone for narrow spaces.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Clear Space</h4>
+      <p>Safe area equals the x-height of "expedia". Minimum width: 54px web, 19mm print. Never crop tighter than provided assets.</p>
+    </div>
+    <div class="flat-card">
+      <h4>The Arrow</h4>
+      <p>Points northeast — upward and to the right. Represents direction, movement, exploration. Not a plane. Not a compass. Pure forward momentum.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 02 — COLOR ===== -->
+<div class="section">
+  <div class="section-label">02 — Color System</div>
+  <h2>Navy + Yellow</h2>
+  <p class="section-intro">A disciplined two-color system. Deep navy for trust and sophistication. Vibrant yellow for warmth and optimism. The rule: limit to three colors or fewer per composition. Every additional color must earn its place.</p>
+
+  <div class="sub-label">Primary Pair</div>
+  <div class="primary-pair">
+    <div class="primary-swatch" style="background:var(--navy);color:var(--white);">
+      <div class="name">Navy</div>
+      <div class="hex">#1E243A · RGB 30, 36, 58 · Pantone 276 C</div>
+    </div>
+    <div class="primary-swatch" style="background:var(--yellow);color:var(--navy);">
+      <div class="name">Yellow</div>
+      <div class="hex">#FEBF4F · RGB 254, 191, 79 · Pantone 135 C</div>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:24px;">Extended Neutrals</div>
+  <div class="neutral-strip">
+    <div class="swatch" style="background:#FFFFFF;border:1px solid var(--border);border-radius:var(--radius-md) 0 0 var(--radius-md);"><span style="color:var(--mid-grey);">White</span></div>
+    <div class="swatch" style="background:var(--off-white);"><span style="color:var(--mid-grey);">Off-White</span></div>
+    <div class="swatch" style="background:var(--light-grey);"><span style="color:var(--dark-grey);">Light</span></div>
+    <div class="swatch" style="background:var(--mid-grey);"><span style="color:var(--white);">Mid</span></div>
+    <div class="swatch" style="background:var(--dark-grey);"><span style="color:var(--white);">Dark</span></div>
+    <div class="swatch" style="background:var(--near-black);"><span style="color:var(--mid-grey);">Near-Black</span></div>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--mid-grey);margin-bottom:24px;letter-spacing:0.02em;">#FFFFFF → #F8F7F5 → #F2F0ED → #B0ADA8 → #6B6560 → #1A1816</div>
+
+  <div class="sub-label">Accent — Coral (Supplementary)</div>
+  <div style="display:inline-block;width:120px;height:48px;background:var(--coral);border-radius:var(--radius-sm);display:flex;align-items:flex-end;padding:8px;margin-bottom:24px;">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--white);">#FF6F61</span>
+  </div>
+
+  <div class="sub-label">Usage Rules</div>
+  <div class="color-rules">
+    <div class="flat-card">
+      <h4>The Rule</h4>
+      <p>Three colors or fewer per composition. Navy and yellow carry 90% of the brand. White and off-white for surfaces. Grey for text hierarchy.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Yellow as Signal</h4>
+      <p>Yellow is the attention color — CTAs, highlights, the chiclet, pricing emphasis, status badges. It's warm but not decorative. Every yellow element should point the user forward.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Navy as Foundation</h4>
+      <p>Navy is the trust color — headers, primary text, the arrow, navigation. Deep enough to feel premium, warm enough to avoid corporate coldness.</p>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:24px;">AA Compliance Pairs</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+    <div class="aa-demo" style="background:var(--navy);color:var(--white);">
+      <div class="sample" style="font-family:'Nunito Sans',sans-serif;font-weight:700;">White on Navy</div>
+      <div class="ratio">~14:1 — AAA</div>
+    </div>
+    <div class="aa-demo" style="background:var(--yellow);color:var(--navy);">
+      <div class="sample" style="font-family:'Nunito Sans',sans-serif;font-weight:700;">Navy on Yellow</div>
+      <div class="ratio">~8:1 — AAA</div>
+    </div>
+    <div class="aa-demo" style="background:var(--white);color:var(--navy);border:1px solid var(--border);">
+      <div class="sample" style="font-family:'Nunito Sans',sans-serif;font-weight:700;">Navy on White</div>
+      <div class="ratio">~15:1 — AAA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 03 — TYPOGRAPHY ===== -->
+<div class="section">
+  <div class="section-label">03 — Typography</div>
+  <h2>Travel Sans & System Fonts</h2>
+  <p class="section-intro">The 2021+ system uses Travel Sans — a custom typeface by Commission Studio with ABC Dinamo, designed specifically for Expedia and Hotels.com. It's inspired by transit signage (Johnston, airport wayfinding) — lowercase-focused, geometric, with travel infrastructure DNA.</p>
+
+  <div class="font-grid">
+    <div class="font-card">
+      <div class="font-card-label">Travel Sans — Display & Headings</div>
+      <div class="font-card-sample" style="font-family:'Nunito Sans',sans-serif;font-weight:800;">It matters who you travel with</div>
+      <p class="font-card-desc">Custom typeface by Commission Studio + ABC Dinamo. Heavy weight for brand statements, regular for product headings. Lowercase-dominant. Inspired by train station and airport signage — a typographic homage to travel infrastructure.</p>
+    </div>
+    <div class="font-card">
+      <div class="font-card-label">Body & UI — Clean Sans</div>
+      <div class="font-card-sample" style="font-family:'Inter',sans-serif;font-weight:500;">Your trip to Lisbon</div>
+      <p class="font-card-desc">Inter or system sans-serif for body text, descriptions, metadata, form labels. Clean and functional. Weight hierarchy: 400 for body, 500 for emphasis, 600 for UI labels. Pairs with Travel Sans without competing.</p>
+    </div>
+  </div>
+
+  <div class="sub-label">Expressive vs. Functional</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div style="background:var(--navy);border-radius:var(--radius-md);padding:32px;color:var(--white);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:14px;">Expressive — Campaign</div>
+      <div style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:28px;line-height:1.15;letter-spacing:-0.02em;margin-bottom:12px;">Made to <span style="color:var(--yellow);">travel</span></div>
+      <p style="font-size:13px;color:var(--mid-grey);line-height:1.6;">Heavy weight, large scale, brand yellow for emphasis. Used in campaign hero moments, social media, brand films. The type is the visual — no decoration needed.</p>
+    </div>
+    <div style="background:var(--light-grey);border-radius:var(--radius-md);padding:32px;color:var(--navy);">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:14px;">Functional — Product</div>
+      <div style="font-family:'Nunito Sans',sans-serif;font-weight:600;font-size:20px;line-height:1.3;margin-bottom:12px;">Flights to Tallinn</div>
+      <p style="font-family:'Inter',sans-serif;font-size:13px;color:var(--dark-grey);line-height:1.6;">Semi-bold headings, regular body. Clean hierarchy through weight, not drama. Information-dense layouts stay scannable because the type system is disciplined.</p>
+    </div>
+  </div>
+
+  <div class="sub-label">Type Scale (Reconstructed)</div>
+  <div style="margin-bottom:24px;">
+    <div class="type-scale-row">
+      <span class="type-scale-token">Display</span>
+      <span style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;">Travel</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H1</span>
+      <span style="font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:32px;line-height:1.15;letter-spacing:-0.02em;">Where are you going?</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H2</span>
+      <span style="font-family:'Nunito Sans',sans-serif;font-weight:600;font-size:22px;line-height:1.3;">Top destinations near you</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H3</span>
+      <span style="font-family:'Nunito Sans',sans-serif;font-weight:600;font-size:16px;line-height:1.35;">Marriott Tallinn Hotel</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Body</span>
+      <span style="font-family:'Inter',sans-serif;font-weight:400;font-size:15px;line-height:1.65;">Modern rooms in the heart of Old Town with views across the harbour.</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Small</span>
+      <span style="font-family:'Inter',sans-serif;font-weight:400;font-size:13px;line-height:1.5;color:var(--dark-grey);">Free cancellation · Breakfast included · 4.2 ★</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Label</span>
+      <span style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--mid-grey);">Hot Ticket</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 04 — PHOTOGRAPHY ===== -->
+<div class="section">
+  <div class="section-label">04 — Photography</div>
+  <h2>"Made to Travel"</h2>
+  <p class="section-intro">The 2022 campaign (Anomaly London, narrated by Ewan McGregor) shifted Expedia's imagery from glossy destination marketing to authentic, emotional travel moments. The things you remember — not the things on postcards.</p>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+      <h4>Style</h4>
+      <p>Vibrant, saturated, warm. Cinematography-quality production values but candid in feel. Natural light preferred. Eye-level perspective — never aerial or drone-like. Slight warmth in the color grade.</p>
+    </div>
+    <div class="photo-card">
+      <h4>Subjects</h4>
+      <p>Real travel moments: hands reaching for food, wet cobblestones at night, a hotel window at dawn, strangers at a bar, unpacking a suitcase. The rituals, not the monuments.</p>
+    </div>
+    <div class="photo-card">
+      <h4>The Yellow Thread</h4>
+      <p>The brand yellow appears "accidentally" within scenes — a lemon on a table, a taxi door, morning light on a wall, a neon sign. It connects disparate moments into one visual language without branding the image.</p>
+    </div>
+  </div>
+
+  <div class="sub-label">Do / Don't</div>
+  <div class="photo-do-dont">
+    <div class="do-card">
+      <h4>Do</h4>
+      <p>Candid moments, eye-level shots, warm natural light, slight grain, real textures (cobblestones, linens, weathered surfaces), people in context not posing, authentic rooms at authentic angles, 2880px+ on longest side.</p>
+    </div>
+    <div class="dont-card">
+      <h4>Don't</h4>
+      <p>Fisheye or telephoto distortion, aerial/drone shots, glossy stock photography, exaggerated room sizing, famous landmarks as hero images, overly posed groups, cold blue-white color grading, tourist clichés.</p>
+    </div>
+  </div>
+
+  <div class="sub-label">Visual Motifs in Campaign</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+    <div class="flat-card">
+      <h4>Lemons</h4>
+      <p>The "Lemons" spot uses lemons as a recurring visual thread connecting Italy, Mexico, and Southeast Asia. One subject, many places — visual storytelling over destination marketing.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Wayfinding</h4>
+      <p>Arrows, coordinates, directional signage woven into layouts. The design language of airports and train stations repurposed as brand texture.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Recurring Color</h4>
+      <p>Brand yellow appears organically in scenes — sunlight, taxis, fruit, textiles. Connects images without a logo. The yellow is a visual signature, not a stamp.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 05 — GRAPHIC LANGUAGE ===== -->
+<div class="section">
+  <div class="section-label">05 — Graphic Language</div>
+  <h2>Arrow, Chiclet, Wayfinding</h2>
+  <p class="section-intro">Expedia's graphic language is built from three elements: the arrow (direction), the chiclet (the brand container), and wayfinding patterns borrowed from travel infrastructure — signage, coordinates, routes.</p>
+
+  <div class="graphic-grid">
+    <div class="graphic-card">
+      <h3>The Arrow</h3>
+      <p>The northeast-pointing arrow is both logo and motif. It appears at all scales — from the chiclet icon to full-bleed campaign graphics. It always points forward and up. Pure momentum, no ambiguity.</p>
+      <div class="tag-row">
+        <span class="tag">northeast</span>
+        <span class="tag">forward momentum</span>
+        <span class="tag">all travel modes</span>
+        <span class="tag">not a plane</span>
+      </div>
+    </div>
+    <div class="graphic-card">
+      <h3>The Chiclet</h3>
+      <p>The yellow square with rounded corners is the brand's most recognizable container. It holds the arrow, but also works as a framing device — photography, callouts, and UI elements can adopt its proportions and radius.</p>
+      <div class="tag-row">
+        <span class="tag">rounded square</span>
+        <span class="tag">16px radius</span>
+        <span class="tag">brand container</span>
+        <span class="tag">scalable</span>
+      </div>
+    </div>
+    <div class="graphic-card">
+      <h3>Wayfinding Patterns</h3>
+      <p>Directional arrows, GPS coordinates, route lines, departure/arrival typography. Borrowed from airports, train stations, and transit systems. These patterns appear as texture in layouts — backgrounds, section dividers, decorative accents.</p>
+      <div class="tag-row">
+        <span class="tag">coordinates</span>
+        <span class="tag">route lines</span>
+        <span class="tag">transit signage</span>
+        <span class="tag">directional</span>
+      </div>
+    </div>
+    <div class="graphic-card">
+      <h3>Geometric Contrast</h3>
+      <p>Rounded shapes (chiclet, buttons, cards) balanced with sharp directional elements (the arrow, coordinate text). Softness for accessibility and approachability, sharpness for confidence and clarity. The tension is deliberate.</p>
+      <div class="tag-row">
+        <span class="tag">rounded + sharp</span>
+        <span class="tag">soft containers</span>
+        <span class="tag">crisp arrows</span>
+        <span class="tag">deliberate tension</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 06 — COMPONENTS ===== -->
+<div class="section">
+  <div class="section-label">06 — Components & UI</div>
+  <h2>Card-Based, Token-Driven</h2>
+  <p class="section-intro">Expedia's design system (Atlas) uses a token-based architecture across React (web), SwiftUI (iOS), and Jetpack Compose (Android). Card-based layouts dominate — unified across flights, hotels, packages, and activities.</p>
+
+  <div class="sub-label">Buttons</div>
+  <div class="button-row">
+    <div class="btn-demo" style="background:var(--navy);color:var(--white);">Search</div>
+    <div class="btn-demo" style="background:var(--yellow);color:var(--navy);">Book Now</div>
+    <div class="btn-demo" style="background:var(--white);color:var(--navy);border:1px solid var(--border);">View Details</div>
+    <div class="btn-demo" style="background:var(--light-grey);color:var(--mid-grey);">Disabled</div>
+  </div>
+
+  <div class="sub-label">Filter Chips</div>
+  <div class="chip-row">
+    <div class="chip active">All</div>
+    <div class="chip">Stays</div>
+    <div class="chip">Flights</div>
+    <div class="chip">Cars</div>
+    <div class="chip">Packages</div>
+    <div class="chip">Things to do</div>
+  </div>
+
+  <div class="sub-label">Property Card (Reconstructed)</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <div class="card-demo">
+      <div class="card-demo-image">Property Photo</div>
+      <div class="card-demo-content">
+        <h4>Hotel & Spa Nõmme</h4>
+        <p>Tallinn · 4.2 ★ · Free cancellation</p>
+        <div class="price">€89 <small>/ night</small></div>
+      </div>
+    </div>
+    <div class="card-demo">
+      <div class="card-demo-image">Property Photo</div>
+      <div class="card-demo-content">
+        <h4>Lisbon Boutique Flat</h4>
+        <p>Alfama · 4.7 ★ · Breakfast included</p>
+        <div class="price">€124 <small>/ night</small></div>
+      </div>
+    </div>
+    <div class="card-demo">
+      <div class="card-demo-image" style="position:relative;">
+        Property Photo
+        <span style="position:absolute;top:8px;left:8px;background:var(--yellow);color:var(--navy);font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;padding:4px 10px;border-radius:4px;">Hot Ticket</span>
+      </div>
+      <div class="card-demo-content">
+        <h4>Shibuya Micro Hotel</h4>
+        <p>Tokyo · 4.5 ★ · Last room!</p>
+        <div class="price">€78 <small>/ night</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-label">Design Tokens (Reconstructed)</div>
+  <div class="component-grid">
+    <div class="flat-card">
+      <h4>Radius</h4>
+      <p>Small: 6px (tags, badges). Medium: 12px (cards, inputs). Large: 16px (hero cards, chiclet). Pill: 999px (buttons, chips, search bar).</p>
+    </div>
+    <div class="flat-card">
+      <h4>Spacing</h4>
+      <p>Base unit: 4px. Card padding: 16–24px. Card gap: 12–16px. Section padding: 48–64px. Touch target minimum: 44px.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Elevation</h4>
+      <p>Level 0: flat (default cards). Level 1: subtle shadow (hover states, dropdowns). Level 2: pronounced shadow (modals, popovers). Shadows are warm-tinted, not pure black.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 07 — TONE OF VOICE ===== -->
+<div class="section">
+  <div class="section-label">07 — Tone of Voice</div>
+  <h2>"It Matters Who You Travel With"</h2>
+  <p class="section-intro">Expedia positions itself as a knowledgeable travel companion — friendly, encouraging, and slightly playful. Never corporate. The voice is peer-to-peer: "we're all travelers here."</p>
+
+  <div class="tone-grid">
+    <div class="tone-card">
+      <h3>Playful, Not Frivolous</h3>
+      <p>Humor is welcome but never at the expense of clarity. The brand busts out personality in headlines and campaigns, then steps back to be clean and functional in the product. Personality has a place — and it's not the checkout flow.</p>
+    </div>
+    <div class="tone-card">
+      <h3>Peer-to-Peer</h3>
+      <p>Never talks down. Gives readers credit for intelligence. Doesn't over-explain. Sounds like a well-traveled friend sharing a recommendation, not a salesperson qualifying a lead.</p>
+    </div>
+    <div class="tone-card">
+      <h3>Forward-Looking</h3>
+      <p>"We are the world's travel platform. We bring the world within reach." Optimistic, ambitious, but grounded in enabling — not showing off. The traveler is the hero, Expedia is the tool.</p>
+    </div>
+    <div class="tone-card">
+      <h3>Emotionally Honest</h3>
+      <p>The "Made to Travel" campaign acknowledged that travel is emotional — not just transactional. The brand doesn't shy away from why travel matters (connection, growth, wonder), but it never gets saccharine.</p>
+    </div>
+    <div class="tone-card">
+      <h3>Contextually Flexible</h3>
+      <p>Tone flexes by context: warm and inspiring in marketing, clear and helpful in the product, urgent and direct in transactional moments. Not one voice — one character at different volumes.</p>
+    </div>
+    <div class="tone-card">
+      <h3>Inclusive</h3>
+      <p>"For everyone" isn't a tagline, it's a design constraint. Language and imagery default to diversity. Accessibility isn't an add-on — it shapes the color system, type scale, and interaction patterns.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 08 — RELEVANCE TO WAYFFOLK ===== -->
+<div class="section">
+  <div class="section-label">08 — Relevance to WayFolk</div>
+  <h2>What WayFolk Can Learn</h2>
+  <p class="section-intro">Expedia is a commercial travel platform at scale. WayFolk is an intimate social travel graph. Different products, but several Expedia decisions are instructive.</p>
+
+  <div class="relevance-grid">
+    <div class="flat-card">
+      <h4>Photography as Brand</h4>
+      <p>Expedia's "yellow thread" — brand color appearing organically in photography — is a powerful technique. WayFolk's earth tones could work similarly: terracotta doorways, sage-colored shutters, sky-colored harbour light. The palette should feel discovered in the world, not applied to it.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Transit Typography</h4>
+      <p>Travel Sans was inspired by Johnston and airport signage. WayFolk's Work Sans serves a similar role — a geometric sans with wayfinding clarity. The idea of typography that "smells like airports and train stations" is powerful for travel brands.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Disciplined Color</h4>
+      <p>Expedia's three-color-max rule is instructive. WayFolk has 23 named colors, but the monochrome-first principle achieves the same discipline: warm neutrals carry 90%, accent colors earn their moments.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Two Registers</h4>
+      <p>Expedia has the same brand/product split: "Made to Travel" campaigns are cinematic and emotional; the booking flow is clean, functional, information-dense. WayFolk's two-register principle (warm brand layer vs. precise product layer) mirrors this exactly.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Chiclet as Container</h4>
+      <p>The rounded yellow square is both logo and design element. WayFolk could develop a signature shape — perhaps derived from the globe or a connection arc — that works at all scales from favicon to hero graphic.</p>
+    </div>
+    <div class="flat-card">
+      <h4>The Differentiation</h4>
+      <p>Expedia is commercial, transactional, at-scale. WayFolk is intimate, social, community-driven. Where Expedia says "book now," WayFolk says "say hello." Where Expedia shows hotels, WayFolk shows people. Same DNA (authentic travel moments), completely different product personality.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <span>Expedia Brand Reference — Reconstructed for WayFolk</span>
+  <span>Sources: brand.expediagroup.com · commission.studio · pentagram.com · dandad.org</span>
+</div>
+
+</body>
+</html>

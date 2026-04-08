@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WayFolk — Brand Direction v0.4</title>
+<!-- Adobe Fonts — Freight Sans Pro (web) -->
+<link rel="stylesheet" href="https://use.typekit.net/yic2dsc.css">
+<!-- Google Fonts — Work Sans, IBM Plex Sans, IBM Plex Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Local font fallbacks — loads Freight Sans from Adobe Creative Cloud desktop fonts
+     when TypeKit web fonts are blocked (e.g. file:// protocol) */
+  @font-face {
+    font-family: 'freight-sans-pro';
+    src: local('Freight Sans Book'), local('FreightSans-Book'), local('FreightSansPro-Book');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'freight-sans-pro';
+    src: local('Freight Sans Book Italic'), local('FreightSans-BookItalic'), local('FreightSansPro-BookItalic');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'freight-sans-pro';
+    src: local('Freight Sans Bold'), local('FreightSans-Bold'), local('FreightSansPro-Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'freight-sans-pro';
+    src: local('Freight Sans Bold Italic'), local('FreightSans-BoldItalic'), local('FreightSansPro-BoldItalic');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+</style>
+<style>
+  :root {
+    /* Warm Neutrals */
+    --parchment: #FAF8F5;
+    --cream:     #F5F0EB;
+    --sand:      #E8DFD4;
+    --stone:     #A89F91;
+    --dusk:      #6B6560;
+    --charcoal:  #4A4541;
+    --espresso:  #2C2825;
+    --night:     #1A1816;
+
+    /* Accents — three stops each */
+    --earth-light: #F5E8DF;
+    --earth:       #C4916E;
+    --earth-dark:  #36251C;
+
+    --sage-light:  #E6EBE2;
+    --sage:        #9BA892;
+    --sage-dark:   #242720;
+
+    --sky-light:   #E3E9EF;
+    --sky:         #8A9BA8;
+    --sky-dark:    #21282E;
+
+    --blush-light: #F2E6E1;
+    --blush:       #D4B8AF;
+    --blush-dark:  #40302B;
+
+    --olive-light: #E4E6DD;
+    --olive:       #7A8068;
+    --olive-dark:  #1C1E18;
+
+    /* Layout */
+    --border: var(--sand);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-pill: 999px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Work Sans', -apple-system, sans-serif;
+    background: var(--parchment);
+    color: var(--espresso);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 80px 60px 88px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    border: 1px solid var(--sand);
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 40px;
+  }
+  .hero h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 72px;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--espresso);
+  }
+  .hero h1 em {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--earth);
+  }
+  .hero .subtitle {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--dusk);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 72px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-of-type { border-bottom: none; }
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: var(--espresso);
+  }
+  .section h2 em {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: var(--dusk);
+    max-width: 640px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--stone);
+  }
+
+  /* ===== FLAT CARDS ===== */
+  .flat-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    background: #fff;
+  }
+  .flat-card h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 10px;
+  }
+  .flat-card p {
+    font-size: 14px;
+    color: var(--dusk);
+    line-height: 1.6;
+  }
+
+  /* ===== THESIS ===== */
+  .thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .thesis-col {
+    padding: 32px;
+  }
+  .thesis-col h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    opacity: 0.5;
+  }
+  .thesis-col p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .principle-box {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    max-width: 760px;
+  }
+  .principle-box h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .principle-box p {
+    font-size: 14px;
+    color: var(--dusk);
+    line-height: 1.65;
+  }
+
+  /* ===== COLOR SYSTEM ===== */
+  .neutral-strip {
+    display: flex;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+  .neutral-strip .swatch {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px 6px;
+  }
+  .neutral-strip .swatch span {
+    font-size: 9px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  .accent-row {
+    display: grid;
+    grid-template-columns: 64px repeat(3, 1fr);
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .accent-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+  .accent-cell {
+    height: 48px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: flex-end;
+    padding: 6px 8px;
+  }
+  .accent-cell span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.02em;
+  }
+
+  .semantic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .aa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .aa-demo {
+    border-radius: var(--radius-md);
+    padding: 24px;
+  }
+  .aa-demo .sample {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .aa-demo .sample em {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .aa-demo .ratio {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  .type-pair {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--cream);
+    align-items: start;
+  }
+  .type-pair:last-child { border-bottom: none; }
+  .type-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+  .type-meta .role {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--espresso);
+    margin-bottom: 6px;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .interplay-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .interplay-card {
+    border-radius: var(--radius-md);
+    padding: 40px;
+  }
+  .interplay-card h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .interplay-card h3 em {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .interplay-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .mode-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .mode-card {
+    border-radius: var(--radius-md);
+    padding: 36px;
+  }
+  .mode-card-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .type-scale-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--cream);
+  }
+  .type-scale-token {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--stone);
+  }
+
+  /* ===== GRAPHIC LANGUAGE ===== */
+  .graphic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .graphic-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    background: #fff;
+  }
+  .graphic-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .graphic-card p {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--dusk);
+  }
+  .graphic-card .tag-row {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--sand);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .graphic-card .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--dusk);
+    background: var(--cream);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .register-pair {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--sand);
+  }
+  .register-box {
+    flex: 1;
+    border: 1px solid var(--sand);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+  }
+  .register-box-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 8px;
+  }
+  .register-box-items {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--dusk);
+  }
+  .register-box-tone {
+    font-family: 'Freight Sans', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--stone);
+    margin-top: 10px;
+  }
+
+  /* ===== SPECIMENS ===== */
+  .specimen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .specimen-card {
+    border-radius: var(--radius-md);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+  }
+  .specimen-overline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 14px;
+  }
+  .specimen-headline {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .specimen-headline em {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* ===== BUTTONS (new) ===== */
+  .btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+  }
+  .btn-dark { background: var(--espresso); color: var(--cream); }
+  .btn-outline { background: transparent; border-color: var(--stone); color: var(--espresso); }
+  .btn-outline-light { background: transparent; border-color: rgba(255,255,255,0.3); color: var(--cream); }
+  .btn-earth { background: var(--earth); color: var(--earth-dark); }
+
+  /* ===== VOICE ===== */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .voice-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    background: #fff;
+  }
+  .voice-card h3 {
+    font-family: 'freight-sans-pro', 'Freight Sans', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--espresso);
+  }
+  .voice-card p {
+    font-size: 13px;
+    color: var(--dusk);
+    line-height: 1.65;
+  }
+
+  /* ===== NEXT STEPS ===== */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .step-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    background: #fff;
+  }
+  .step-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--sand);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .step-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .step-card p {
+    font-size: 13px;
+    color: var(--dusk);
+    line-height: 1.55;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    padding: 24px 60px;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--stone);
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═════════════════════════════════════ -->
+<!-- HERO                                  -->
+<!-- ═════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-badge">Brand Direction v0.4</div>
+  <h1>Your people, <em>everywhere</em></h1>
+  <p class="subtitle">WayFolk's visual identity — where Kinfolk's warmth, ElevenLabs' systems thinking, and Ōura's typographic intimacy converge. A brand that makes travel and human connection visible.</p>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 01 — THESIS                           -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">01 — Thesis</div>
+  <h2>Three influences, <em>one synthesis</em></h2>
+  <p class="section-intro">Each reference brand contributes one thing WayFolk can't do without. Kinfolk provides the emotional warmth. ElevenLabs provides the structural logic. Ōura provides the typographic signature — the dual-voice italic interplay that gives headlines a heartbeat.</p>
+
+  <div class="thesis-grid">
+    <div class="thesis-col" style="background:var(--cream);color:var(--espresso);">
+      <h4>From Kinfolk</h4>
+      <p>Warm neutrals over cold blacks. Earth-tone accents. Photography as primary content — candid, eye-level, everyday intimacy. Editorial restraint. Space and breath. Wabi-sabi imperfection.</p>
+    </div>
+    <div class="thesis-col" style="background:var(--night);color:var(--cream);">
+      <h4>From ElevenLabs</h4>
+      <p>Monochrome-first palette. AA compliance baked in. Two typographic modes — expressive and functional. Flat bordered cards, tight grids, monospace tokens. System over decoration.</p>
+    </div>
+    <div class="thesis-col" style="background:var(--earth-light);color:var(--earth-dark);">
+      <h4>From Ōura</h4>
+      <p>The dual-voice italic interplay — rational claim in geometric sans, emotional payoff in humanist italic. Sandstone warmth as canvas. Golden-hour photography. Pill buttons. Two-register design: warm brand layer, precise product layer.</p>
+    </div>
+  </div>
+
+  <div class="principle-box">
+    <h3>The Governing Idea</h3>
+    <p>ElevenLabs made sound visible. Ōura made health wearable. WayFolk makes travel personal — through people, not geography. The visual language should feel like opening a letter from a friend who knows the city you're heading to. Every headline starts with what you know and lands on what you feel.</p>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 02 — COLOR SYSTEM                     -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">02 — Color System</div>
+  <h2>A curated palette, <em>not a generated one</em></h2>
+  <p class="section-intro">Twenty-three named colors. Eight warm neutrals form the monochrome foundation. Five accent hues — each with a light, mid, and dark stop — provide all the chromatic range WayFolk needs. No pure black. No pure white. Warm neutrals carry 90% of every surface.</p>
+
+  <div class="sub-label">Warm Neutrals</div>
+  <div class="neutral-strip">
+    <div class="swatch" style="background:var(--parchment);"><span style="color:var(--stone);">Parchment</span></div>
+    <div class="swatch" style="background:var(--cream);"><span style="color:var(--stone);">Cream</span></div>
+    <div class="swatch" style="background:var(--sand);"><span style="color:var(--dusk);">Sand</span></div>
+    <div class="swatch" style="background:var(--stone);"><span style="color:var(--cream);">Stone</span></div>
+    <div class="swatch" style="background:var(--dusk);"><span style="color:var(--cream);">Dusk</span></div>
+    <div class="swatch" style="background:var(--charcoal);"><span style="color:var(--cream);">Charcoal</span></div>
+    <div class="swatch" style="background:var(--espresso);"><span style="color:var(--sand);">Espresso</span></div>
+    <div class="swatch" style="background:var(--night);"><span style="color:var(--stone);">Night</span></div>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--stone);margin-bottom:32px;letter-spacing:0.02em;">#FAF8F5 → #F5F0EB → #E8DFD4 → #A89F91 → #6B6560 → #4A4541 → #2C2825 → #1A1816</div>
+
+  <div class="sub-label">Five Accents — Three Stops</div>
+  <div class="accent-row">
+    <span class="accent-label">Earth</span>
+    <div class="accent-cell" style="background:var(--earth-light);"><span style="color:var(--earth-dark);">#F5E8DF</span></div>
+    <div class="accent-cell" style="background:var(--earth);"><span style="color:var(--earth-dark);">#C4916E</span></div>
+    <div class="accent-cell" style="background:var(--earth-dark);"><span style="color:var(--earth-light);">#36251C</span></div>
+  </div>
+  <div class="accent-row">
+    <span class="accent-label">Sage</span>
+    <div class="accent-cell" style="background:var(--sage-light);"><span style="color:var(--sage-dark);">#E6EBE2</span></div>
+    <div class="accent-cell" style="background:var(--sage);"><span style="color:var(--sage-dark);">#9BA892</span></div>
+    <div class="accent-cell" style="background:var(--sage-dark);"><span style="color:var(--sage-light);">#242720</span></div>
+  </div>
+  <div class="accent-row">
+    <span class="accent-label">Sky</span>
+    <div class="accent-cell" style="background:var(--sky-light);"><span style="color:var(--sky-dark);">#E3E9EF</span></div>
+    <div class="accent-cell" style="background:var(--sky);"><span style="color:var(--sky-dark);">#8A9BA8</span></div>
+    <div class="accent-cell" style="background:var(--sky-dark);"><span style="color:var(--sky-light);">#21282E</span></div>
+  </div>
+  <div class="accent-row">
+    <span class="accent-label">Blush</span>
+    <div class="accent-cell" style="background:var(--blush-light);"><span style="color:var(--blush-dark);">#F2E6E1</span></div>
+    <div class="accent-cell" style="background:var(--blush);"><span style="color:var(--blush-dark);">#D4B8AF</span></div>
+    <div class="accent-cell" style="background:var(--blush-dark);"><span style="color:var(--blush-light);">#40302B</span></div>
+  </div>
+  <div class="accent-row" style="margin-bottom:24px;">
+    <span class="accent-label">Olive</span>
+    <div class="accent-cell" style="background:var(--olive-light);"><span style="color:var(--olive-dark);">#E4E6DD</span></div>
+    <div class="accent-cell" style="background:var(--olive);"><span style="color:var(--olive-light);">#7A8068</span></div>
+    <div class="accent-cell" style="background:var(--olive-dark);"><span style="color:var(--olive-light);">#1C1E18</span></div>
+  </div>
+
+  <div class="sub-label">Usage Rules</div>
+  <div class="semantic-grid">
+    <div class="flat-card">
+      <h4>The Rule</h4>
+      <p>Warm neutrals carry 90% of the interface. Accent colors appear only when something meaningful happens — a connection, a trip, a notification, a place on the globe. Color is earned, not assumed.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Light on Light</h4>
+      <p>Parchment or cream as the canvas. Sand as divider. Accent-light as a tinted background with espresso or charcoal text. Keep it quiet — like natural light on linen.</p>
+    </div>
+    <div class="flat-card">
+      <h4>Dark on Dark</h4>
+      <p>Night as background, cream or sand as text, accent-mid for color moments. The globe view lives here — warm, not cold. Connection arcs glow.</p>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:32px;">AA Compliance — Built In</div>
+  <div class="aa-grid">
+    <div class="aa-demo" style="background:var(--parchment);color:var(--espresso);border:1px solid var(--sand);">
+      <div class="sample">You have <em>Folk</em> in every city</div>
+      <div class="ratio">Espresso / Parchment — ~13:1</div>
+    </div>
+    <div class="aa-demo" style="background:var(--earth-light);color:var(--earth-dark);">
+      <div class="sample">Plan your next trip, <em>together</em></div>
+      <div class="ratio">Earth Dark / Earth Light — AA</div>
+    </div>
+    <div class="aa-demo" style="background:var(--sage-light);color:var(--sage-dark);">
+      <div class="sample">Discover places <em>your friends love</em></div>
+      <div class="ratio">Sage Dark / Sage Light — AA</div>
+    </div>
+    <div class="aa-demo" style="background:var(--night);color:var(--cream);">
+      <div class="sample">Your people, <em>everywhere</em></div>
+      <div class="ratio">Cream / Night — ~14:1</div>
+    </div>
+    <div class="aa-demo" style="background:var(--night);color:var(--earth);">
+      <div class="sample">Travel made <em>personal</em></div>
+      <div class="ratio">Earth / Night — AA</div>
+    </div>
+    <div class="aa-demo" style="background:var(--charcoal);color:var(--sand);">
+      <div class="sample">The best advice comes <em>from friends</em></div>
+      <div class="ratio">Sand / Charcoal — AA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 03 — TYPOGRAPHY                       -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">03 — Typography</div>
+  <h2>The interplay — <em>where precision meets warmth</em></h2>
+  <p class="section-intro">WayFolk's typographic signature is inspired by Ōura: headlines begin in Work Sans Light (the geometric, structural voice) and land on Freight Sans Italic (the humanist, emotional payoff). Two sans-serifs with fundamentally different DNA — one clean and geometric, the other warm and organic. IBM Plex Sans handles all body text. IBM Plex Mono for labels and tokens. The interplay is what makes WayFolk feel like neither a tech app nor a travel magazine — but something in between.</p>
+
+  <div class="sub-label">The Signature Pattern</div>
+  <div class="interplay-grid">
+    <div class="interplay-card" style="background:var(--cream);color:var(--espresso);">
+      <div class="interplay-label">Light mode — Brand</div>
+      <h3>You have <em>Folk</em> in every city</h3>
+    </div>
+    <div class="interplay-card" style="background:var(--night);color:var(--cream);">
+      <div class="interplay-label" style="color:var(--stone);">Dark mode — Brand</div>
+      <h3>Your people, <em style="color:var(--earth);">everywhere</em></h3>
+    </div>
+    <div class="interplay-card" style="background:var(--earth-light);color:var(--earth-dark);">
+      <div class="interplay-label">Accent surface</div>
+      <h3>Plan your next trip, <em>together</em></h3>
+    </div>
+    <div class="interplay-card" style="background:var(--sage-light);color:var(--sage-dark);">
+      <div class="interplay-label">Accent surface</div>
+      <h3>Discover places <em>your friends love</em></h3>
+    </div>
+    <div class="interplay-card" style="background:#fff;color:var(--espresso);border:1px solid var(--sand);">
+      <div class="interplay-label">Card / Marketing</div>
+      <h3>The best travel advice doesn't come from an algorithm — it comes <em>from a friend</em></h3>
+    </div>
+    <div class="interplay-card" style="background:var(--espresso);color:var(--sand);">
+      <div class="interplay-label" style="color:var(--stone);">Dark — Waitlist</div>
+      <h3>Travel is better when it's <em style="color:var(--earth);">personal</em></h3>
+    </div>
+  </div>
+
+  <div class="sub-label">Font Roles</div>
+  <div class="type-pair">
+    <div class="type-meta">
+      <div class="role">Work Sans — Sans Primary</div>
+      Weights: Light (300), Regular (400), Medium (500), SemiBold (600)<br>
+      Use: Headline structure, UI headings, buttons, navigation, section titles
+    </div>
+    <div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.03em;line-height:1.15;color:var(--espresso);">Your people, everywhere</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;color:var(--espresso);margin-top:12px;">Your Folk in Tallinn</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:13px;color:var(--dusk);margin-top:8px;display:flex;gap:12px;">
+        <span class="btn btn-dark" style="font-size:12px;padding:8px 18px;">Say Hello</span>
+        <span class="btn btn-outline" style="font-size:12px;padding:8px 18px;">Later</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="type-pair">
+    <div class="type-meta">
+      <div class="role">Freight Sans — Humanist Italic</div>
+      Weights: Light Italic (300i), Regular Italic (400i), Medium Italic (500i)<br>
+      Use: Emphasis words in headlines, pull quotes, testimonials, the word "Folk"
+    </div>
+    <div>
+      <div style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;font-size:40px;letter-spacing:-0.02em;line-height:1.15;color:var(--espresso);">everywhere</div>
+      <div style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;font-size:40px;letter-spacing:-0.02em;line-height:1.15;color:var(--earth);margin-top:4px;">Folk</div>
+      <div style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;font-size:40px;letter-spacing:-0.02em;line-height:1.15;color:var(--espresso);margin-top:4px;">together</div>
+      <div style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;font-size:40px;letter-spacing:-0.02em;line-height:1.15;color:var(--espresso);margin-top:4px;">from a friend</div>
+    </div>
+  </div>
+
+  <div class="type-pair">
+    <div class="type-meta">
+      <div class="role">IBM Plex Sans — Body</div>
+      Weights: Light (300), Regular (400), Medium (500)<br>
+      Use: Body text, descriptions, captions, metadata, small text
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:16px;line-height:1.7;color:var(--dusk);max-width:480px;">Sarah lived in Tokyo for three years and knows the city like a local. She'll tell you which izakaya to visit and which tourist trap to skip.</div>
+      <div style="font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:14px;color:var(--stone);margin-top:8px;">Last active 2 days ago · Speaks English, Estonian</div>
+    </div>
+  </div>
+
+  <div class="type-pair">
+    <div class="type-meta">
+      <div class="role">IBM Plex Mono — Labels</div>
+      Weights: Regular (400), Medium (500)<br>
+      Use: Section numbers, tokens, overlines, hex values, all-caps labels
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--stone);line-height:2.2;">
+        01 — THESIS<br>
+        UPCOMING TRIP<br>
+        BRAND DIRECTION V0.4<br>
+        JOIN THE WAITLIST →
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-label" style="margin-top:40px;">Two Modes</div>
+  <div class="mode-grid">
+    <div class="mode-card" style="background:var(--night);color:var(--cream);">
+      <div class="mode-card-label" style="color:var(--stone);">Expressive — Marketing &amp; Brand</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">You have <em style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;color:var(--earth);">Folk</em> in every city</div>
+      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--stone);">Work Sans Light headlines with Freight Sans italic for the emotional payoff. IBM Plex Sans body. The serif word is always the one that carries the feeling.</p>
+    </div>
+    <div class="mode-card" style="background:var(--cream);color:var(--espresso);">
+      <div class="mode-card-label" style="color:var(--stone);">Functional — Product UI</div>
+      <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:20px;line-height:1.3;margin-bottom:14px;">Your Folk in Tallinn</div>
+      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--dusk);">Work Sans Medium for product headings. IBM Plex Sans for all body text. Freight Sans appears only in feature labels and empty-state headlines — keeping the brand warmth present but restrained.</p>
+    </div>
+  </div>
+
+  <div class="sub-label">Type Scale</div>
+  <div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Display</span>
+      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:56px;line-height:1;letter-spacing:-0.03em;">Way<em style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;color:var(--earth);">Folk</em></span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H1</span>
+      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:40px;line-height:1.1;letter-spacing:-0.02em;">Your people, <em style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;">everywhere</em></span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H2</span>
+      <span style="font-family:'Work Sans',sans-serif;font-weight:300;font-size:28px;line-height:1.2;letter-spacing:-0.02em;">Plan your next trip, <em style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;">together</em></span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">H3</span>
+      <span style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;line-height:1.35;">Your Folk in Tallinn</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Body</span>
+      <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:16px;line-height:1.7;">Sarah lived in Tokyo for three years and knows the city like a local.</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Small</span>
+      <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:400;font-size:14px;line-height:1.5;">Last active 2 days ago · Speaks English, Estonian</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-token">Label</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--stone);">Upcoming Trip</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 04 — GRAPHIC LANGUAGE                 -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">04 — Graphic Language</div>
+  <h2>Making travel <em>human</em></h2>
+  <p class="section-intro">The graphic language splits into two registers: a warm, editorial brand layer for web, marketing, and empty states, and a precise, functional product layer for the UI. The brand breathes warmth. The product earns trust through clarity. The two never blur.</p>
+
+  <div class="graphic-grid">
+    <div class="graphic-card">
+      <h3>Photography Direction</h3>
+      <p>Candid, golden-hour, warm tones. Human interactions — not landmarks. Shot at eye level, natural light, shallow depth of field. The kind of photo your friend would text you from Lisbon. People in context, not posing. Hands in motion. Slight grain welcome.</p>
+      <div class="tag-row">
+        <span class="tag">café table</span>
+        <span class="tag">cobblestone dusk</span>
+        <span class="tag">hands on a map</span>
+        <span class="tag">morning doorway</span>
+        <span class="tag">laughing over food</span>
+        <span class="tag">golden hour</span>
+      </div>
+    </div>
+
+    <div class="graphic-card">
+      <h3>Hand-Drawn Illustration</h3>
+      <p>Loose, single-weight line drawings — quick sketch energy. Always warm, never clinical. Used in marketing, social, and app empty states — never in the functional product UI. The line is the brand's handwriting.</p>
+      <div class="tag-row">
+        <span class="tag">coffee cups</span>
+        <span class="tag">bicycles</span>
+        <span class="tag">doorways</span>
+        <span class="tag">people at tables</span>
+        <span class="tag">hands + phones</span>
+        <span class="tag">luggage tags</span>
+      </div>
+    </div>
+
+    <div class="graphic-card">
+      <h3>Two-Register Principle</h3>
+      <p>Warm brand layer for marketing and onboarding: photography, illustration, Freight Sans italic, connection arcs. Precise product layer for the UI itself: Work Sans Medium, clean layout, monochrome-first, functional color only when meaningful.</p>
+      <div class="register-pair">
+        <div class="register-box">
+          <div class="register-box-label">Brand Layer</div>
+          <div class="register-box-items">Photography · Illustration · Freight Sans italic emphasis · Warm tones · Pill buttons · Connection arcs</div>
+          <div class="register-box-tone">"warmth, intimacy"</div>
+        </div>
+        <div class="register-box">
+          <div class="register-box-label">Product Layer</div>
+          <div class="register-box-items">Clean layout · Sans-serif UI · Monochrome-first · Precise spacing · Functional color · Flat cards</div>
+          <div class="register-box-tone">"clarity, trust"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="graphic-card">
+      <h3>Buttons &amp; Interaction</h3>
+      <p>Pill-shaped buttons (border-radius: 999px) for brand/marketing contexts — borrowed from Ōura. Subtly rounded rectangles for product UI. Outline buttons as secondary actions. The pill is warm; the rectangle is functional.</p>
+      <div style="display:flex;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--sand);flex-wrap:wrap;">
+        <span class="btn btn-dark">Join the Waitlist</span>
+        <span class="btn btn-outline">Explore</span>
+        <span class="btn btn-earth">Say Hello</span>
+        <span style="background:var(--espresso);color:var(--cream);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Work Sans',sans-serif;font-size:12px;font-weight:500;">Product CTA</span>
+        <span style="background:var(--cream);color:var(--dusk);padding:8px 16px;border-radius:var(--radius-sm);font-family:'Work Sans',sans-serif;font-size:12px;">Secondary</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="principle-box">
+    <h3>Connection Arcs — The One Geographic Element</h3>
+    <p>Softened, hand-drawn-feeling arcs between people across cities. They appear in the brand layer and occasionally in the product. The arc represents a relationship between people — not a flight path. Thin, warm-hued, slightly imperfect. More like a line drawn between pins on a corkboard than a vector on a map.</p>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 05 — APPLIED SPECIMENS                -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">05 — Applied Specimens</div>
+  <h2>How it <em>comes together</em></h2>
+  <p class="section-intro">The color system, typography, and graphic language applied to real WayFolk contexts. Every headline uses the interplay — Work Sans structure, Freight Sans italic soul.</p>
+
+  <div class="specimen-grid">
+    <div class="specimen-card" style="background:var(--night);color:var(--cream);">
+      <div>
+        <div class="specimen-overline">Waitlist Hero</div>
+        <div class="specimen-headline" style="font-size:32px;color:var(--cream);">You have <em style="color:var(--earth);">Folk</em> in every city</div>
+      </div>
+      <div>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--stone);line-height:1.6;margin-bottom:16px;">The people you'd actually call when you land. WayFolk maps your real-life travel network.</p>
+        <span class="btn btn-outline-light" style="font-size:12px;">Join the Waitlist →</span>
+      </div>
+    </div>
+
+    <div class="specimen-card" style="background:var(--cream);color:var(--espresso);border:1px solid var(--sand);">
+      <div>
+        <div class="specimen-overline" style="opacity:0.4;">Marketing — Social</div>
+        <div class="specimen-headline">The best travel advice doesn't come from an algorithm — it comes <em>from a friend</em></div>
+      </div>
+      <div>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--dusk);line-height:1.6;">It comes from your friend who lived there for two years.</p>
+      </div>
+    </div>
+
+    <div class="specimen-card" style="background:var(--espresso);color:var(--sand);">
+      <div>
+        <div class="specimen-overline">Globe View</div>
+        <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:18px;margin-bottom:6px;color:var(--cream);">Your Globe</div>
+        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:var(--stone);">12 cities · 47 Folk · 3 upcoming trips</div>
+      </div>
+      <div style="display:flex;gap:6px;margin-top:20px;">
+        <span style="background:var(--earth-dark);color:var(--earth-light);padding:5px 12px;border-radius:var(--radius-pill);font-family:'IBM Plex Mono',monospace;font-size:10px;">Tallinn</span>
+        <span style="background:var(--sage-dark);color:var(--sage-light);padding:5px 12px;border-radius:var(--radius-pill);font-family:'IBM Plex Mono',monospace;font-size:10px;">Lisbon</span>
+        <span style="background:var(--sky-dark);color:var(--sky-light);padding:5px 12px;border-radius:var(--radius-pill);font-family:'IBM Plex Mono',monospace;font-size:10px;">Tokyo</span>
+      </div>
+    </div>
+
+    <div class="specimen-card" style="background:#fff;color:var(--espresso);border:1px solid var(--sand);">
+      <div>
+        <div class="specimen-overline" style="opacity:0.4;">Notification</div>
+        <div style="font-family:'Work Sans',sans-serif;font-weight:500;font-size:16px;margin-bottom:6px;">Sarah is heading to <em style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-weight:400;">Tallinn</em></div>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--dusk);line-height:1.6;">Your friend Sarah just shared she'll be in your city next week. She'd love a coffee recommendation.</p>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <span class="btn btn-dark" style="font-size:12px;padding:8px 18px;">Say Hello</span>
+        <span class="btn btn-outline" style="font-size:12px;padding:8px 18px;">Later</span>
+      </div>
+    </div>
+
+    <div class="specimen-card" style="background:var(--earth-light);color:var(--earth-dark);">
+      <div>
+        <div class="specimen-overline">Feature Promo</div>
+        <div class="specimen-headline" style="font-size:26px;">Don't just visit places — visit them through <em>the people who know them</em></div>
+      </div>
+      <div>
+        <span class="btn" style="background:var(--earth-dark);color:var(--earth-light);font-size:12px;padding:8px 18px;">Learn More</span>
+      </div>
+    </div>
+
+    <div class="specimen-card" style="background:var(--sage-light);color:var(--sage-dark);">
+      <div>
+        <div class="specimen-overline">Empty State</div>
+        <div class="specimen-headline" style="font-size:24px;">No trips yet — but your <em>Folk</em> are already out there</div>
+      </div>
+      <div>
+        <p style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:var(--sage-dark);line-height:1.6;opacity:0.8;margin-bottom:12px;">Start by adding the friends who know the world best.</p>
+        <span class="btn" style="background:var(--sage-dark);color:var(--sage-light);font-size:12px;padding:8px 18px;">Add Your First Folk</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial specimen -->
+  <div style="max-width:600px;">
+    <div class="flat-card" style="background:var(--cream);border-color:var(--sand);">
+      <h4>Testimonial Pattern</h4>
+      <div style="font-family:'freight-sans-pro', 'Freight Sans', sans-serif;font-style:italic;font-size:22px;line-height:1.5;color:var(--espresso);margin-top:12px;">WayFolk changed how I travel. I don't search for hotels anymore — I ask my Folk what they'd do.</div>
+      <div style="font-family:'Work Sans',sans-serif;font-size:13px;color:var(--stone);margin-top:14px;">Anna K., WayFolk Member</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 06 — VOICE ALIGNMENT                  -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">06 — Voice ↔ Visual Alignment</div>
+  <h2>How the brand voice <em>maps to visuals</em></h2>
+  <p class="section-intro">The approved brand voice defines WayFolk as warm, conversational, people-centered, and never showy. The interplay makes the voice typographic — Work Sans is the rational friend, Freight Sans italic is the emotional one.</p>
+
+  <div class="voice-grid">
+    <div class="voice-card">
+      <h3>"warm but not showy"</h3>
+      <p>Work Sans Light is clean without being cold. Freight Sans italic adds warmth without decorating. Muted earth tones avoid loudness. Monochrome-first means color is earned. Confident without flashy.</p>
+    </div>
+    <div class="voice-card">
+      <h3>"conversational, not corporate"</h3>
+      <p>The interplay gives headlines a human cadence — like someone thinking aloud. The sans sets up the thought, the serif lands it. Pill buttons feel approachable. Warm cream canvas feels domestic — linen, not chrome.</p>
+    </div>
+    <div class="voice-card">
+      <h3>"people, not geography"</h3>
+      <p>Photography shows human interaction, not landmarks. The Freight Sans italic always emphasizes human words: "Folk," "together," "friends," "personal." Connection arcs represent relationships, not routes. Travel made visible through people.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- 07 — WHAT'S NEXT                      -->
+<!-- ═════════════════════════════════════ -->
+<div class="section">
+  <div class="section-num">07 — What Comes Next</div>
+  <h2>Decisions to make <em>in Figma</em></h2>
+  <p class="section-intro">This direction document is a starting point. The interplay pattern and brand voice are defined. The following decisions need design work, not specification.</p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <h3>Wordmark &amp; Logo</h3>
+      <p>Does "WayFolk" use the interplay? Work Sans "Way" + Freight Sans italic "Folk"? Or a custom wordmark that embodies the principle? Does a symbol sit alongside it?</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <h3>Color Validation</h3>
+      <p>Five hues need testing against real UI — globe on dark mode, notification cards, profile screens. The system is a scaffold, not a final answer.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <h3>Illustration Style</h3>
+      <p>Commission or create hand-drawn illustrations. Test the single-weight line approach at multiple sizes and on warm surfaces.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <h3>Photography Brief</h3>
+      <p>Define the shot list. Golden-hour warmth, candid moments, hands in motion. Source or shoot reference images that feel like Ōura's intimacy meets Kinfolk's editorial eye.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">05</div>
+      <h3>Globe Interface</h3>
+      <p>Where color, typography, and graphic language converge. Dark mode, connection density, travel signals. The highest-stakes design surface.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">06</div>
+      <h3>Component Library</h3>
+      <p>Pill vs. rounded-rect tokens. Card styles for brand vs. product contexts. Input fields, form patterns, bottom sheets. Build from the warmth of the type and color.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════════════════ -->
+<!-- FOOTER                                -->
+<!-- ═════════════════════════════════════ -->
+<div class="footer">
+  <span>WayFolk Brand Direction v0.4</span>
+  <span>Working document — not a final specification</span>
+</div>
+
+</body>
+</html>

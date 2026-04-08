@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinfolk Brand Reference — Reconstructed Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Kinfolk reconstructed palette */
+    --white: #FFFFFF;
+    --off-white: #FAFAF7;
+    --cream: #F5F0EB;
+    --sand: #E8DFD4;
+    --warm-beige: #D4C8B8;
+    --linen: #C9BBA8;
+    --stone: #A89F91;
+    --warm-gray: #8A8279;
+    --charcoal: #4A4541;
+    --near-black: #2C2825;
+    --black: #1A1816;
+
+    /* accent tones */
+    --sage: #9BA892;
+    --dusty-olive: #7A8068;
+    --clay: #B8947A;
+    --terracotta: #C4916E;
+    --muted-blue: #8A9BA8;
+    --soft-pink: #D4B8AF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--white);
+    color: var(--near-black);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- Layout --- */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .full-bleed {
+    width: 100%;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section + .section {
+    border-top: 1px solid var(--sand);
+  }
+
+  /* --- Typography --- */
+  .display {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .display-medium {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .heading-1 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .heading-2 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .heading-3 {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
+  .body-text {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .caption {
+    font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  .sans {
+    font-family: 'Work Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .italic { font-style: italic; }
+  .light { font-weight: 300; }
+
+  /* --- Section Label --- */
+  .section-label {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 48px;
+  }
+
+  .section-label span {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  /* --- Cover / Hero --- */
+  .hero {
+    background: var(--cream);
+    padding: 120px 40px;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .wordmark {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 300;
+    font-size: 96px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--near-black);
+    margin-bottom: 24px;
+  }
+
+  .hero .subtitle {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  .hero .note {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--stone);
+    margin-top: 48px;
+    max-width: 500px;
+  }
+
+  /* --- Color Swatches --- */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .swatch {
+    text-align: center;
+  }
+
+  .swatch-color {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+
+  .swatch-color.bordered {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  }
+
+  .swatch-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+  }
+
+  .swatch-hex {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--stone);
+  }
+
+  .palette-section-label {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-top: 48px;
+    margin-bottom: 8px;
+  }
+
+  /* --- Type Specimen --- */
+  .type-row {
+    margin-bottom: 48px;
+  }
+
+  .type-meta {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 12px;
+  }
+
+  .type-divider {
+    height: 1px;
+    background: var(--sand);
+    margin: 48px 0;
+  }
+
+  /* --- Photography --- */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    margin-top: 32px;
+  }
+
+  .photo-block {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .photo-block-wide {
+    aspect-ratio: 16/9;
+    grid-column: span 2;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .photo-sim {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--warm-gray);
+  }
+
+  /* --- Principles --- */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 64px;
+    margin-top: 40px;
+  }
+
+  .principle {
+    padding-top: 20px;
+    border-top: 1px solid var(--sand);
+  }
+
+  .principle-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--warm-beige);
+    margin-bottom: 12px;
+  }
+
+  .principle-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .principle-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--charcoal);
+  }
+
+  /* --- Editorial Spread Simulation --- */
+  .spread {
+    margin-top: 40px;
+  }
+
+  .spread-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 3px;
+  }
+
+  .spread-left {
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .spread-right {
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --- Texture blocks --- */
+  .texture-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+    margin-top: 32px;
+  }
+
+  .texture-block {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .texture-label {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  /* --- Voice Section --- */
+  .voice-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  .voice-col h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 16px;
+  }
+
+  .voice-col p {
+    font-family: 'EB Garamond', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+
+  .voice-col p.quiet {
+    color: var(--stone);
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid var(--sand);
+  }
+
+  .footer p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--stone);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 700px) {
+    .hero .wordmark { font-size: 48px; }
+    .display { font-size: 40px; }
+    .display-medium { font-size: 32px; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .voice-pair { grid-template-columns: 1fr; }
+    .spread-pair { grid-template-columns: 1fr; }
+    .photo-grid { grid-template-columns: 1fr; }
+    .photo-block-wide { grid-column: span 1; }
+    .container { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== HERO ==================== -->
+<div class="hero">
+  <div class="wordmark">Kinfolk</div>
+  <div class="subtitle">A guide for small gatherings</div>
+  <div class="note">Reconstructed brand reference based on public sources. Not an official Kinfolk document. Built as a visual direction reference for WayFolk.</div>
+</div>
+
+<!-- ==================== BRAND OVERVIEW ==================== -->
+<div class="container">
+<div class="section">
+  <div class="section-label"><span>01 &mdash; Brand Overview</span></div>
+  <div class="display" style="max-width: 720px; margin-bottom: 32px;">Discovering the value in slowing down.</div>
+  <div class="body-text" style="max-width: 560px; color: var(--charcoal);">
+    Kinfolk is a slow-living magazine founded in Portland, Oregon in 2011 and later relocated to Copenhagen. The name combines <em>kin</em> (family) and <em>folk</em> (friends). The brand defined the visual aesthetic of a generation &mdash; minimalist warmth, intentional living, and the beauty of small gatherings.
+  </div>
+  <div style="margin-top: 32px; display: flex; gap: 48px; flex-wrap: wrap;">
+    <div>
+      <div class="caption" style="margin-bottom: 6px;">Founded</div>
+      <div class="heading-3">2011, Portland</div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 6px;">Current base</div>
+      <div class="heading-3">Copenhagen</div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 6px;">Creative direction</div>
+      <div class="heading-3">Alex Hunting Studio</div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 6px;">Custom type</div>
+      <div class="heading-3">Schick Toikka</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== COLOR PALETTE ==================== -->
+<div class="section">
+  <div class="section-label"><span>02 &mdash; Color Palette</span></div>
+  <div class="heading-1" style="margin-bottom: 16px;">Earth, linen, stone.</div>
+  <div class="body-text" style="max-width: 560px; color: var(--charcoal);">
+    Kinfolk's palette is deliberately restrained. Muted earth tones create warmth without competing with photography. Color serves atmosphere, never decoration. The communicative role of colour &mdash; creating an &ldquo;appealing grammar&rdquo; &mdash; is one of the brand's defining characteristics.
+  </div>
+
+  <div class="palette-section-label">Core neutrals</div>
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color bordered" style="background: var(--white);"></div>
+      <div class="swatch-name">White</div>
+      <div class="swatch-hex">#FFFFFF</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color bordered" style="background: var(--off-white);"></div>
+      <div class="swatch-name">Off-white</div>
+      <div class="swatch-hex">#FAFAF7</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--cream);"></div>
+      <div class="swatch-name">Cream</div>
+      <div class="swatch-hex">#F5F0EB</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--sand);"></div>
+      <div class="swatch-name">Sand</div>
+      <div class="swatch-hex">#E8DFD4</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--warm-beige);"></div>
+      <div class="swatch-name">Warm Beige</div>
+      <div class="swatch-hex">#D4C8B8</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--linen);"></div>
+      <div class="swatch-name">Linen</div>
+      <div class="swatch-hex">#C9BBA8</div>
+    </div>
+  </div>
+
+  <div class="palette-section-label">Darks</div>
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--stone);"></div>
+      <div class="swatch-name">Stone</div>
+      <div class="swatch-hex">#A89F91</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--warm-gray);"></div>
+      <div class="swatch-name">Warm Gray</div>
+      <div class="swatch-hex">#8A8279</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--charcoal);"></div>
+      <div class="swatch-name">Charcoal</div>
+      <div class="swatch-hex">#4A4541</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--near-black);"></div>
+      <div class="swatch-name">Near Black</div>
+      <div class="swatch-hex">#2C2825</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--black);"></div>
+      <div class="swatch-name">Black</div>
+      <div class="swatch-hex">#1A1816</div>
+    </div>
+  </div>
+
+  <div class="palette-section-label">Organic accents (used sparingly)</div>
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--sage);"></div>
+      <div class="swatch-name">Sage</div>
+      <div class="swatch-hex">#9BA892</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--dusty-olive);"></div>
+      <div class="swatch-name">Dusty Olive</div>
+      <div class="swatch-hex">#7A8068</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--clay);"></div>
+      <div class="swatch-name">Clay</div>
+      <div class="swatch-hex">#B8947A</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--terracotta);"></div>
+      <div class="swatch-name">Terracotta</div>
+      <div class="swatch-hex">#C4916E</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--muted-blue);"></div>
+      <div class="swatch-name">Muted Blue</div>
+      <div class="swatch-hex">#8A9BA8</div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: var(--soft-pink);"></div>
+      <div class="swatch-name">Soft Pink</div>
+      <div class="swatch-hex">#D4B8AF</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TYPOGRAPHY ==================== -->
+<div class="section">
+  <div class="section-label"><span>03 &mdash; Typography</span></div>
+  <div class="heading-1" style="margin-bottom: 16px;">A compact, versatile palette.</div>
+  <div class="body-text" style="max-width: 560px; color: var(--charcoal); margin-bottom: 16px;">
+    Kinfolk's 2021 redesign introduced a custom type family by Schick Toikka: a serif and sans-serif pair with matching italics, sharing vertical dimensions so they mix harmoniously. The serif includes a Text style for body and a Display style with higher contrast for headlines.
+  </div>
+  <div class="body-text" style="max-width: 560px; color: var(--stone); font-style: italic; margin-bottom: 48px;">
+    Note: The custom Kinfolk typefaces are proprietary. This specimen uses Cormorant Garamond (display), EB Garamond (text), and Work Sans (sans) as open-source approximations that capture the spirit of the editorial approach.
+  </div>
+
+  <!-- Display -->
+  <div class="type-row">
+    <div class="type-meta">Display Serif &mdash; Cormorant Garamond Light &mdash; Headlines, cover lines</div>
+    <div class="display" style="margin-bottom: 8px;">The Kinfolk Table</div>
+    <div class="display italic light">Small Gatherings</div>
+  </div>
+
+  <div class="type-divider"></div>
+
+  <!-- Medium Display -->
+  <div class="type-row">
+    <div class="type-meta">Display Serif &mdash; Cormorant Garamond Regular &mdash; Section headers, feature titles</div>
+    <div class="display-medium">The Art of Simple Living</div>
+  </div>
+
+  <div class="type-divider"></div>
+
+  <!-- Heading -->
+  <div class="type-row">
+    <div class="type-meta">Heading &mdash; Cormorant Garamond Medium &mdash; Article titles, pull quotes</div>
+    <div class="heading-1" style="max-width: 600px;">Conversations on the value of togetherness, companionship, and kinship.</div>
+  </div>
+
+  <div class="type-divider"></div>
+
+  <!-- Body -->
+  <div class="type-row">
+    <div class="type-meta">Text Serif &mdash; EB Garamond Regular &mdash; Body copy, captions, small headlines</div>
+    <div class="body-text" style="max-width: 560px;">
+      What distinguished Kinfolk was never a single visual device but the quality of restraint &mdash; knowing when to let a photograph breathe, when to leave a page half empty, when to set a headline in 72 points and when to whisper it in 9. The design created an appealing grammar of color and composition that readers came to associate with a way of living, not merely a magazine.
+    </div>
+  </div>
+
+  <div class="type-divider"></div>
+
+  <!-- Sans -->
+  <div class="type-row">
+    <div class="type-meta">Sans-Serif &mdash; Work Sans &mdash; Navigation, captions, labels, metadata</div>
+    <div style="font-family: 'Work Sans', sans-serif; font-weight: 300; font-size: 32px; line-height: 1.2; margin-bottom: 16px;">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk</div>
+    <div class="caption" style="margin-bottom: 8px;">ARTS &amp; CULTURE &nbsp;&middot;&nbsp; DESIGN &nbsp;&middot;&nbsp; FASHION &nbsp;&middot;&nbsp; INTERIORS &nbsp;&middot;&nbsp; MUSIC &nbsp;&middot;&nbsp; TRAVEL</div>
+    <div style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 13px; color: var(--warm-gray); letter-spacing: 0.02em;">Issue 59 &nbsp;&middot;&nbsp; The Clean Issue &nbsp;&middot;&nbsp; Copenhagen, 2025</div>
+  </div>
+
+  <div class="type-divider"></div>
+
+  <!-- Alphabet -->
+  <div class="type-row">
+    <div class="type-meta">Full Character Set &mdash; Display Serif</div>
+    <div class="display light" style="font-size: 42px; line-height: 1.2; color: var(--charcoal); word-spacing: 8px;">
+      Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+    </div>
+    <div style="margin-top: 24px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 42px; line-height: 1.2; color: var(--warm-beige);">
+      1 2 3 4 5 6 7 8 9 0 &amp; ? ! ;
+    </div>
+  </div>
+</div>
+
+<!-- ==================== EDITORIAL SIMULATION ==================== -->
+<div class="section">
+  <div class="section-label"><span>04 &mdash; Editorial Layout</span></div>
+
+  <!-- Spread 1: Cream background -->
+  <div class="spread">
+    <div class="spread-pair">
+      <div class="spread-left" style="background: var(--cream); padding: 60px 48px;">
+        <div class="caption" style="margin-bottom: 24px;">Essay</div>
+        <div class="display-medium" style="margin-bottom: 20px;">The Case for Eating Alone</div>
+        <div class="body-text" style="color: var(--charcoal); max-width: 360px;">
+          There is a particular pleasure in dining without performance. No conversation to maintain, no pace to match. Just the food, the room, and whatever your mind does when it is left alone with a plate.
+        </div>
+      </div>
+      <div class="spread-right" style="background: var(--sand);">
+        <div class="photo-sim" style="color: var(--linen);">
+          <div style="text-align: center;">
+            <div style="font-size: 13px; font-style: normal;" class="caption">[ photograph ]</div>
+            <div style="margin-top: 8px;">Soft daylight on linen tablecloth,<br>single ceramic bowl, wilting herbs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spread 2: Dark -->
+  <div class="spread" style="margin-top: 3px;">
+    <div class="spread-pair">
+      <div class="spread-right" style="background: var(--near-black);">
+        <div class="photo-sim" style="color: var(--warm-gray);">
+          <div style="text-align: center;">
+            <div style="font-size: 13px; font-style: normal;" class="caption" style="color: var(--warm-gray);">[ photograph ]</div>
+            <div style="margin-top: 8px;">Hands holding stoneware mug,<br>morning light through gauze curtain</div>
+          </div>
+        </div>
+      </div>
+      <div class="spread-left" style="background: var(--near-black); color: var(--cream);">
+        <div class="caption" style="color: var(--warm-gray); margin-bottom: 24px;">Interview</div>
+        <div class="display-medium" style="color: var(--cream); margin-bottom: 20px;">On Stillness</div>
+        <div class="body-text" style="color: var(--linen); max-width: 360px;">
+          &ldquo;I don&rsquo;t think stillness is the absence of movement. It&rsquo;s the presence of attention. You can be still in a crowded room if you decide to notice what&rsquo;s actually there.&rdquo;
+        </div>
+        <div style="margin-top: 24px; font-family: 'Work Sans', sans-serif; font-size: 12px; color: var(--warm-gray);">
+          Words by Ana Kras &nbsp;&middot;&nbsp; Photography by Cereal
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full width quote -->
+  <div style="background: var(--off-white); padding: 80px 48px; margin-top: 3px; text-align: center;">
+    <div class="display light italic" style="max-width: 700px; margin: 0 auto; color: var(--charcoal);">
+      &ldquo;The things that matter most<br>are rarely the loudest.&rdquo;
+    </div>
+    <div class="caption" style="margin-top: 32px;">Nathan Williams, Kinfolk Founder</div>
+  </div>
+</div>
+
+<!-- ==================== PHOTOGRAPHY ==================== -->
+<div class="section">
+  <div class="section-label"><span>05 &mdash; Photography Direction</span></div>
+  <div class="heading-1" style="margin-bottom: 16px;">Soft light. Quiet subjects.</div>
+  <div class="body-text" style="max-width: 560px; color: var(--charcoal); margin-bottom: 40px;">
+    Photography is the primary carrier of the brand. Every image follows the same principles: natural daylight, generous negative space, organic textures, and an embrace of imperfection. The wabi-sabi influence is deliberate &mdash; wrinkled linens, slightly irregular ceramics, wilting flowers are beautiful because they are real.
+  </div>
+
+  <!-- Simulated photo grid with descriptions -->
+  <div class="photo-grid">
+    <div class="photo-block" style="background: var(--cream);">
+      <div class="photo-sim">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 11px; font-style: normal;" class="caption">[ portrait ]</div>
+          <div style="margin-top: 8px; font-size: 14px;">Profile in natural window light.<br>Linen shirt. Bare wall.<br>Eyes looking away from camera.</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-block" style="background: var(--sand);">
+      <div class="photo-sim">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 11px; font-style: normal;" class="caption">[ still life ]</div>
+          <div style="margin-top: 8px; font-size: 14px;">Handmade ceramic on oak table.<br>Single dried stem. Soft shadow.<br>Shallow depth of field.</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-block" style="background: var(--warm-beige);">
+      <div class="photo-sim">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 11px; font-style: normal;" class="caption">[ gathering ]</div>
+          <div style="margin-top: 8px; font-size: 14px;">Hands reaching for bread.<br>Wooden table, mismatched plates.<br>Candlelight, golden hour.</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-block" style="background: var(--off-white);">
+      <div class="photo-sim">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 11px; font-style: normal;" class="caption">[ space ]</div>
+          <div style="margin-top: 8px; font-size: 14px;">Empty room. Stone floor.<br>Single chair near window.<br>Morning light on plaster wall.</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-block-wide" style="background: var(--cream);">
+      <div class="photo-sim">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 11px; font-style: normal;" class="caption">[ landscape ]</div>
+          <div style="margin-top: 8px; font-size: 14px;">Coastal scene. Overcast sky. Muted colors. A single figure in the distance. Generous negative space above.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo rules -->
+  <div class="principles-grid" style="margin-top: 48px;">
+    <div>
+      <div class="caption" style="margin-bottom: 8px;">Always</div>
+      <div class="body-text" style="font-size: 15px; color: var(--charcoal);">
+        Soft, diffused natural daylight. Generous breathing room. Organic textures and materials. Candid moments over posed. Imperfection as beauty.
+      </div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 8px;">Never</div>
+      <div class="body-text" style="font-size: 15px; color: var(--charcoal);">
+        Flash or harsh artificial light. Cluttered compositions. Glossy or synthetic surfaces. Stock photography. Over-saturated color.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== DESIGN PRINCIPLES ==================== -->
+<div class="section">
+  <div class="section-label"><span>06 &mdash; Design Principles</span></div>
+  <div class="heading-1" style="margin-bottom: 8px;">How Kinfolk designs.</div>
+
+  <div class="principles-grid">
+    <div class="principle">
+      <div class="principle-number">01</div>
+      <div class="principle-title">Warm minimalism</div>
+      <div class="principle-text">Not cold or clinical. Minimalism with texture, warmth, and humanity. Restraint in service of feeling, not austerity.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-number">02</div>
+      <div class="principle-title">Negative space is content</div>
+      <div class="principle-text">Empty space is a deliberate compositional tool. It creates calm, focus, and room for the reader's imagination. Never fill space for the sake of filling it.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-number">03</div>
+      <div class="principle-title">Photography leads</div>
+      <div class="principle-text">Images carry the emotional weight. Typography and layout serve the photography, never compete with it. When in doubt, let the image breathe.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-number">04</div>
+      <div class="principle-title">Classic meets contemporary</div>
+      <div class="principle-text">Timeless quality balanced with modern sensibility. Serif elegance with sans-serif utility. Traditions respected, never slavishly followed.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-number">05</div>
+      <div class="principle-title">Grammar of color</div>
+      <div class="principle-text">Color is communicative, not decorative. The muted palette creates atmosphere. Saturated color is an event, not a default.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-number">06</div>
+      <div class="principle-title">Evolution over revolution</div>
+      <div class="principle-text">The brand evolves gradually. Each redesign refines rather than reinvents. Consistency over years is what builds recognition.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TEXTURE PALETTE ==================== -->
+<div class="section">
+  <div class="section-label"><span>07 &mdash; Material & Texture Palette</span></div>
+  <div class="body-text" style="max-width: 560px; color: var(--charcoal); margin-bottom: 8px;">
+    The Kinfolk world is built from natural materials. These textures recur across photography, set design, and editorial styling. They are the physical vocabulary of the brand.
+  </div>
+
+  <div class="texture-grid">
+    <div class="texture-block" style="background: var(--cream);">
+      <span class="texture-label" style="color: var(--warm-gray);">Linen</span>
+    </div>
+    <div class="texture-block" style="background: var(--warm-beige);">
+      <span class="texture-label" style="color: var(--warm-gray);">Wool</span>
+    </div>
+    <div class="texture-block" style="background: #B8A998;">
+      <span class="texture-label" style="color: var(--charcoal);">Oak</span>
+    </div>
+    <div class="texture-block" style="background: var(--sand);">
+      <span class="texture-label" style="color: var(--warm-gray);">Ceramic</span>
+    </div>
+    <div class="texture-block" style="background: #C5C0B8;">
+      <span class="texture-label" style="color: var(--charcoal);">Stone</span>
+    </div>
+    <div class="texture-block" style="background: var(--off-white);">
+      <span class="texture-label" style="color: var(--stone);">Paper</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== VOICE ==================== -->
+<div class="section">
+  <div class="section-label"><span>08 &mdash; Voice & Tone</span></div>
+  <div class="heading-1" style="margin-bottom: 32px;">Quiet, considered, warm.</div>
+
+  <div class="voice-pair">
+    <div class="voice-col">
+      <h4>The voice is</h4>
+      <p>Unhurried. Literate. Attentive to detail without being precious. It reads like a conversation with someone who thinks before they speak and chooses their words carefully &mdash; not to impress, but because precision is a form of respect.</p>
+    </div>
+    <div class="voice-col">
+      <h4>The voice is not</h4>
+      <p class="quiet">Urgent. Clever. Performative. Selling. It never chases trends, never shouts, never uses exclamation marks as a substitute for genuine enthusiasm. It does not need to convince you of anything &mdash; it assumes you already share its values.</p>
+    </div>
+  </div>
+
+  <div style="background: var(--off-white); padding: 48px; border-radius: 0;">
+    <div class="caption" style="margin-bottom: 20px;">Kinfolk tone in action</div>
+    <div class="body-text" style="max-width: 520px; color: var(--charcoal);">
+      &ldquo;This issue is an exploration of what it means to entertain with purpose &mdash; to set a table not for show but for the conversation that happens around it. The best gatherings are rarely the most elaborate. They are the ones where someone thought about who should sit next to whom.&rdquo;
+    </div>
+  </div>
+</div>
+
+<!-- ==================== BRAND EVOLUTION ==================== -->
+<div class="section">
+  <div class="section-label"><span>09 &mdash; Brand Evolution</span></div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px;">
+    <div>
+      <div class="caption" style="margin-bottom: 12px;">2011 &ndash; 2015</div>
+      <div class="heading-2" style="margin-bottom: 8px;">Rustic warmth</div>
+      <div style="font-size: 15px; line-height: 1.6; color: var(--charcoal);">
+        DIY sensibility. Handmade feel. Blurry watercolors. Pale, restrained color. Adobe Caslon. Garamond. Japanese-influenced whitespace. Portland roots.
+      </div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 12px;">2015 &ndash; 2021</div>
+      <div class="heading-2" style="margin-bottom: 8px;">Refined editorial</div>
+      <div style="font-size: 15px; line-height: 1.6; color: var(--charcoal);">
+        Charlotte Heal redesign. Garamond + Avenir + Fortescue. Left-aligned headers. Full-bleed images. Illustrators introduced. Copenhagen relocation. Gallery-like polish.
+      </div>
+    </div>
+    <div>
+      <div class="caption" style="margin-bottom: 12px;">2021 &ndash; Present</div>
+      <div class="heading-2" style="margin-bottom: 8px;">Custom maturity</div>
+      <div style="font-size: 15px; line-height: 1.6; color: var(--charcoal);">
+        Alex Hunting Studio. Custom Schick Toikka type family. New grid, paper stocks, logo. Serif + sans sharing proportions. Architectural precision. The aesthetic codified.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== WAYFOLK NOTE ==================== -->
+<div class="section" style="background: var(--cream); margin: 0 -40px; padding: 80px 80px;">
+  <div class="section-label"><span>10 &mdash; Relevance to WayFolk</span></div>
+  <div class="heading-1" style="margin-bottom: 24px;">What translates. What doesn't.</div>
+
+  <div class="voice-pair" style="gap: 48px;">
+    <div class="voice-col">
+      <h4>Carries over</h4>
+      <p>The muted warmth of the palette. The restraint &mdash; knowing what not to include. Serif elegance for emotional moments paired with sans-serif for utility. Typography as the primary design tool. The &ldquo;grammar of color&rdquo; approach where tones create atmosphere. The principle that quality of attention matters more than volume of information.</p>
+    </div>
+    <div class="voice-col">
+      <h4>Needs adapting</h4>
+      <p>Kinfolk is built around stillness; WayFolk is about movement and connection. Kinfolk's photography centers objects and spaces; WayFolk centers people. Kinfolk's pace is slow and contemplative; WayFolk needs to work at travel speed, on mobile, between flights. The refinement needs to survive a 15px notification on a phone screen, not just a printed spread.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<div class="container">
+<div class="footer">
+  <p>
+    Reconstructed brand reference &mdash; not an official Kinfolk document.<br>
+    Sources: Alex Hunting Studio, It's Nice That, Schick Toikka, Klim Type Foundry, Fonts In Use.<br>
+    Typeface approximations: Cormorant Garamond, EB Garamond, Work Sans (Google Fonts).<br>
+    Prepared for WayFolk brand development &mdash; April 2026.
+  </p>
+</div>
+</div>
+
+</body>
+</html>
